@@ -39,10 +39,12 @@ rmd_files: [
   "41-graph-coloring.Rmd",
   "42-dominating-sets.Rmd",
   "43-steiner-trees.Rmd",
-  # "50-part.Rmd",
-  # "51-info-hiding.Rmd",
-  # "52-crypto.Rmd",
-  # "53-public-key.Rmd",
+  # 5부 --------------------------
+  "50-part.Rmd",
+  "51-info-hiding.Rmd",
+  "52-crypto.Rmd",
+  "53-public-key.Rmd",
+  # 6부 --------------------------
   # "60-part.Rmd",
   # "61-hci.Rmd",
   # "62-turing.Rmd",
