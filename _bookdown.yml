@@ -45,9 +45,9 @@ rmd_files: [
   "52-crypto.Rmd",
   "53-public-key.Rmd",
   # 6부 --------------------------
-  # "60-part.Rmd",
-  # "61-hci.Rmd",
-  # "62-turing.Rmd",
+  "60-part.Rmd",
+  "61-hci.Rmd",
+  "62-turing.Rmd",
 
 
   # 참고문헌

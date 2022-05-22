@@ -43,7 +43,8 @@ description: "데이터 사이언스를 이해하는 꼭 필요한 개념을 정
 ---
 
 "데이터 과학 언플러그드" 저작을 위해 
-[Computer Science Unplugged](http://csunplugged.org/) 책의 
+[Computer Science Unplugged](http://csunplugged.org/)의 클래식 버젼
+[CS Unplugged](https://classic.csunplugged.org/)[@bell2015cs]의 
 크리에이티브 커먼스 라이선스를 준용하고 있으며
 한국적인 상황을 최대한 반영하여 내용 및 삽화를 일부 수정하였습니다. 
 또한, 컴퓨터 과학 언플러그드 공유 및 협업을 위해 
