@@ -12,7 +12,8 @@
 예를 들어, 공항에서 비행기에 가방에 단 3개 로마자로 ICN(인천), NRT(나리타), HKG(홍콩) 공항을 상상합니다. 
 다음 문장을 모음 없이 읽을 수 있습니까?  
 
-``` {r info-theory, eval=FALSE} 
+
+```r
 Ths sntnc hs th vwls mssng.
 ```
 

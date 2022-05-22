@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 . 다시 말할 수 있어요! - 텍스트 압축 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="3.1 활동 3  개요 컴퓨터가 정보를 저장하기 위한 공간에는 한계가 있어서, 가능하면 효율적으로 정보를 표현할 필요가 있다. 이 방법을 “압축”(compression)이라고 한다. 저장하기 전에 데이터를 부호화(coding)하고 정보를 끌어낼 때는 복호화(decoding)해서, 컴퓨터에 더 많은 데이터를 저장하고 인터넷을 통해서 더 빨리 보낼 수...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="3 . 다시 말할 수 있어요! - 텍스트 압축 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="3.1 활동 3  개요 컴퓨터가 정보를 저장하기 위한 공간에는 한계가 있어서, 가능하면 효율적으로 정보를 표현할 필요가 있다. 이 방법을 “압축”(compression)이라고 한다. 저장하기 전에 데이터를 부호화(coding)하고 정보를 끌어낼 때는 복호화(decoding)해서, 컴퓨터에 더 많은 데이터를 저장하고 인터넷을 통해서 더 빨리 보낼 수...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 . 다시 말할 수 있어요! - 텍스트 압축 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="3.1 활동 3  개요 컴퓨터가 정보를 저장하기 위한 공간에는 한계가 있어서, 가능하면 효율적으로 정보를 표현할 필요가 있다. 이 방법을 “압축”(compression)이라고 한다. 저장하기 전에 데이터를 부호화(coding)하고 정보를 끌어낼 때는 복호화(decoding)해서, 컴퓨터에 더 많은 데이터를 저장하고 인터넷을 통해서 더 빨리 보낼 수...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></li>
+<li><a class="active" href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 스무고개 - 정보 이론</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="text-compression" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3 . </span> 다시 말할 수 있어요! - 텍스트 압축<a class="anchor" aria-label="anchor" href="#text-compression"><i class="fas fa-link"></i></a>
+</h1>
+<div id="binary-number-text" class="rmdnote">
+<div id="activity-three" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> 활동 3<a class="anchor" aria-label="anchor" href="#activity-three"><i class="fas fa-link"></i></a>
+</h2>
+<div id="개요-2" class="section level3 unnumbered">
+<h3>개요<a class="anchor" aria-label="anchor" href="#%EA%B0%9C%EC%9A%94-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>컴퓨터가 정보를 저장하기 위한 공간에는 한계가 있어서, 가능하면 효율적으로 정보를 표현할 필요가 있다.
+이 방법을 “압축”(compression)이라고 한다.
+저장하기 전에 데이터를 부호화(coding)하고 정보를 끌어낼 때는 복호화(decoding)해서,
+컴퓨터에 더 많은 데이터를 저장하고 인터넷을 통해서 더 빨리 보낼 수 있게 한다.</p>
+</div>
+<div id="교과학습-연계-2" class="section level3 unnumbered">
+<h3>교과학습 연계<a class="anchor" aria-label="anchor" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>영어: 단어와 텍스트 패턴 인식</li>
+<li>기술: 기술 지식과 이해. 컴퓨터 작동원리</li>
+</ul>
+</div>
+<div id="기술-2" class="section level3 unnumbered">
+<h3>기술<a class="anchor" aria-label="anchor" href="#%EA%B8%B0%EC%88%A0-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>글로 쓴 텍스트 복사</p>
+</div>
+<div id="나이-2" class="section level3 unnumbered">
+<h3>나이<a class="anchor" aria-label="anchor" href="#%EB%82%98%EC%9D%B4-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>9세 이상</li>
+</ul>
+</div>
+<div id="학습-교재-2" class="section level3 unnumbered">
+<h3>학습 교재<a class="anchor" aria-label="anchor" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>OHP 마스터에서 복사한 OHP 시트: 다시 말할 수 있어요!</li>
+<li>아이마다 필요한 것
+<ul>
+<li>워크시트 활동: 다시 말하기!</li>
+<li>워크시트 활동: 심화 문제</li>
+<li>워크시트 활동: 짧고 간결하게</li>
+<li>워크시트 활동: 심화 문제 (상급자)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="compression-avi" class="section level3" number="3.1.1">
+<h3>
+<span class="header-section-number">3.1.1</span> 언플러그드 활동 동영상<a class="anchor" aria-label="anchor" href="#compression-avi"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="70%">
+<col width="30%">
+</colgroup>
+<thead><tr class="header">
+<th align="center">한글</th>
+<th align="center">영어</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">-</td>
+<td align="center"><iframe width="350" height="260" src="https://www.youtube.com/embed/VsjpPs146d8?list=PLG2oQ9v7R96GBkux2Sl_5Lje9KjSgmtPU" frameborder="0" allowfullscreen> </iframe></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div id="text-compression-say-again" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> 다시 말할 수 있어요!<a class="anchor" aria-label="anchor" href="#text-compression-say-again"><i class="fas fa-link"></i></a>
+</h2>
+<div id="들어가며-2" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> 들어가며<a class="anchor" aria-label="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>컴퓨터는 많은 데이터를 저장하고 전송해야 합니다.
+그래서 너무 많은 저장 공간을 사용하거나, 네트워크를 통해 정보를 보내는데 시간이 오래 걸리면 안돼서, 텍스트를 다음과 같이 압축합니다.</p>
+</div>
+<div id="시연-및-토론" class="section level3" number="3.2.2">
+<h3>
+<span class="header-section-number">3.2.2</span> 시연 및 토론<a class="anchor" aria-label="anchor" href="#%EC%8B%9C%EC%97%B0-%EB%B0%8F-%ED%86%A0%EB%A1%A0"><i class="fas fa-link"></i></a>
+</h3>
+<p>“비(rain)” OHP 로 보여주세요. 다음 시(poem)에서 문자 패턴을 찾아보세요.
+반복되는 2 개 이상의 문자, 단어, 문구를 찾을 수 있나요?
+(아래 도식에서처럼 박스를 채워넣으세요, <em>참고</em>. pitter patter 타닥타닥 소리)</p>
+<div class="figure">
+<img src="img/ch03-text/03-text-01-pitter-platter.png" style="width:100.0%" alt=""><p class="caption">pitter patter 타닥타닥 소리</p>
+</div>
+</div>
+</div>
+<div id="학습-교구-다시-말할-수-있어요" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> 학습 교구: 다시 말할 수 있어요!<a class="anchor" aria-label="anchor" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EA%B5%AC-%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94"><i class="fas fa-link"></i></a>
+</h2>
+<div class="figure">
+<img src="img/ch03-text/03-text-02-the-rain.PNG" style="width:100.0%" alt=""><p class="caption">비(Rain)</p>
+</div>
+<ul>
+<li>Rain: 비</li>
+<li>pitter patter: 빗소리</li>
+<li>Listen to:귀 기울여 듣다</li>
+<li>window pane: 창유리</li>
+</ul>
+</div>
+<div id="text-say-again" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> 학습 교구: 다시 말할 수 있어요!<a class="anchor" aria-label="anchor" href="#text-say-again"><i class="fas fa-link"></i></a>
+</h2>
+<p>다음 시에서 많은 단어와 글자가 빠져있습니다.
+여러분이 빠진 단어와 글자를 채워 넣어 온전한 시가 될 수 있도록 만들어 주세요.
+화살표가 가리키는 박스에서 채워 넣을 단어와 글자를 찾을 수 있습니다.</p>
+<div class="inline-figure"><img src="img/ch03-text/03-text-03-peas.png" style="width:100.0%"></div>
+<p>이제 간단한 시나 동요를 골라서 여러분 자신만의 퍼즐을 만들어보세요.
+여러분이 만든 화살표가 항상 이전 텍스트 부분을 가리키는지를 꼭 확인하세요.
+우리가 읽는 동일한 방식으로 여러분의 시는 왼쪽에서 오른쪽으로 위에서 아래로 복호화할 수 있어야 합니다.</p>
+<p>::: {text-challenge .rmdcaution}</p>
+<p><strong>도전문제 : 여러분이 얼마나 적은 단어를 필요로 하는지 살펴보세요.</strong></p>
+<p><strong>제안</strong>: “Three Blind Mice”, “Mary Mary Quite Contrary”, “Hickory Dickory Dock”
+혹은 Dr Seuss 책도 시도해 보세요.</p>
+<p><strong>힌트</strong>: 너무나 많은 화살표를 피하세요. 글을 써가면서, 글자와 단어 주변에 많은 공백을
+둬서 박스 내부와 이를 가리키는 화살표 사이에 박스를 위한 공간을 확보하세요.</p>
+<p>시를 먼저 쓰고 나서 박스를 어디에 위치할지를 결정한다면 퍼즐 설계가 훨씬 쉬워요.</p>
+</div>
+</div>
+<div id="text-compression-worksheet" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> 활동: 심화 문제<a class="anchor" aria-label="anchor" href="#text-compression-worksheet"><i class="fas fa-link"></i></a>
+</h2>
+<p>이 퍼즐을 어떻게 풀 수 있나요?</p>
+<div class="inline-figure"><img src="img/ch03-text/03-text-04-banana-01.png" style="width:100.0%"></div>
+<p>가끔 빠진 텍스트가 자기 자신의 일부를 가리킵니다.
+이런 경우 글자가 왼쪽부터 오른쪽으로 복사된다면 올바르게 복호화됩니다.
+필요하기 전에 각 문자가 복사되어 사용가능해집니다.
+특별히 긴 순서의 문자나 패턴있다면, 컴퓨터에서 유용합니다.</p>
+<p>여러분 자신만의 그림을 몇개 그려보세요.</p>
+<p>컴퓨터에 박스와 화살표는 숫자로 나타납니다. 예를 들어,</p>
+<dl>
+<h2>
+Banana
+</h2>
+</dl>
+Ban(2,3)로 쓰여집니다. 복사를 위해서 “<strong>2</strong>”는 시작점으로 처음에서 2 글자 다음에서 시작한다는 의미가 된다.
+<dl>
+<h2>
+B<u>a</u>n_ _ _
+</h2>
+</dl>
+<p>“<strong>3</strong>”은 연속된 3 개 문자 복사를 뜻합니다.</p>
+<dl>
+<h2>
+B<u>a</u>n_ _
+</h2>
+</dl>
+<dl>
+<h2>
+Ban<u>a</u>n_
+</h2>
+</dl>
+<dl>
+<h2>
+Ban<u>a</u>na
+</h2>
+</dl>
+<div class="inline-figure"><img src="img/ch03-text/03-text-04-banana-02.png"></div>
+<p>숫자 두 개가 단어를 복호화하는데 사용되었는데, 대체로 둘 혹은 이상의 문자 그룹만을 사용할 때 압축에 효과가 있습니다.
+그렇지 않은 경우 공간이 절약되지 못합니다.
+사실, 숫자 두개를 사용하여 한 문자를 부호화한다면 파일 크기는 올라갈 수 있어요.</p>
+<blockquote>
+<p>컴퓨터가 압축하는 방식과 동일하게 자신만의 단어 몇개를 만드세요.
+여러분의 친구가 복호화할 수 있을까요?</p>
+</blockquote>
+</div>
+<div id="text-compression-worksheet-short" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> 활동: 짧고 간결하게<a class="anchor" aria-label="anchor" href="#text-compression-worksheet-short"><i class="fas fa-link"></i></a>
+</h2>
+<div id="여러분은-여기에서-얼마나-많은-단어를-필요로-하나요" class="section level3 unnumbered">
+<h3>여러분은 여기에서 얼마나 많은 단어를 필요로 하나요?<a class="anchor" aria-label="anchor" href="#%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EC%97%AC%EA%B8%B0%EC%97%90%EC%84%9C-%EC%96%BC%EB%A7%88%EB%82%98-%EB%A7%8E%EC%9D%80-%EB%8B%A8%EC%96%B4%EB%A5%BC-%ED%95%84%EC%9A%94%EB%A1%9C-%ED%95%98%EB%82%98%EC%9A%94"><i class="fas fa-link"></i></a>
+</h3>
+<p>여러분 자신을 가능한 많은 정보를 디스크에 저장하려고 하는 컴퓨터라고 가정해봅시다.
+이미 앞에서 나온 두개 이상의 문자 그룹을 선을 그어 지우세요.
+포인터로 대체될테니 이들은 더 이상 필요하지 않아요.
+목적은 가능한 많은 문자를 줄을 그어 지우는 것입니다.</p>
+<dl>
+<h3>
+I know an old lady who swallowed a bird <br>
+How absurd! She swallowed a bird! <br>
+She swallowed the bird to catch the spider <br>
+That wriggled and jiggled and tickled inside her <br>
+She swallowed the spider to catch the fly <br>
+I don’t know why she swallowed a fly <br>
+Perhaps she’ll die…
+</h3>
+</dl>
+</div>
+</div>
+<div id="활동-심화-문제-상급자-text-compression-worksheet-advanced" class="section level2" number="3.7">
+<h2>
+<span class="header-section-number">3.7</span> 활동: 심화 문제 (상급자) {text-compression-worksheet-advanced}<a class="anchor" aria-label="anchor" href="#%ED%99%9C%EB%8F%99-%EC%8B%AC%ED%99%94-%EB%AC%B8%EC%A0%9C-%EC%83%81%EA%B8%89%EC%9E%90-text-compression-worksheet-advanced"><i class="fas fa-link"></i></a>
+</h2>
+<div id="정말로-어려운-압축에-도전할-준비가-되셨나요" class="section level3 unnumbered">
+<h3>정말로 어려운 압축에 도전할 준비가 되셨나요?<a class="anchor" aria-label="anchor" href="#%EC%A0%95%EB%A7%90%EB%A1%9C-%EC%96%B4%EB%A0%A4%EC%9A%B4-%EC%95%95%EC%B6%95%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%A0-%EC%A4%80%EB%B9%84%EA%B0%80-%EB%90%98%EC%85%A8%EB%82%98%EC%9A%94"><i class="fas fa-link"></i></a>
+</h3>
+<p>아래 이야기에 대해 컴퓨터 프로그램을 실행하여 1,633 문자가 줄을 그어 지워질 수 있다는 것을 확인했다.
+여러분은 얼마나 많이 찾아 지울 수 있나요?
+단지, 두개 이상의 반복되는 문자만을 줄을 그어 제거할 수 있다는 것을 기억하세요.
+행운을 빕니다.</p>
+<pre><code>Once upon a time, long, long ago, three little pigs set out to make their fortunes. The first little pig wasn’t very clever, and decided to build his house out &gt; of straw, because it was cheap. The second little pig wasn’t very clever either, and decided to build his house out of sticks, for the “natural” look that was &gt; so very much in fashion, even in those days. The third little pig was much smarter than his two brothers, and bought a load of bricks in a nearby town, with which &gt; to construct a sturdy but comfortable country home.  
+ 
+Not long after his housewarming party, the first little pig was curled up in a chair reading a book, when there came a knock at the door. It was the big bad wolf, &gt; naturally.  
+
+“Little pig, little pig, let me come in!” cried the wolf.  
+
+“Not by the hair on my chinny-chin-chin!” squealed the first little pig.  
+
+“Then I’ll huff, and I’ll puff, and I’ll blow your house down!” roared the wolf, and he did huff, and he did puff, and the house soon collapsed. The first &gt; little pig ran as fast as he could to the house of sticks, and was soon safe inside. But it wasn’t long before the wolf came calling again.  
+
+“Little pig, little pig, let me come in!” cried the wolf.  
+
+“Not by the hair on my chinny-chin-chin!” squealed the second little pig.  
+
+“Then I’ll huff, and I’ll puff, and I’ll blow your house down!” roared the wolf, and he did huff, and he did puff, and the house was soon so much firewood. &gt; The two terrified little pigs ran all the way to their brother’s brick house, but the wolf was hot on their heels, and soon he was on the doorstep.  
+
+“Little pig, little pig, let me come in!” cried the wolf.  
+
+“Not by the hair on my chinny-chin-chin!” squealed the third little pig.  
+
+“Then I’ll huff, and I’ll puff, and I’ll blow your house down!” roared the wolf, and he huffed, and he puffed, and he huffed some more, but of course, the &gt; house was built of brick, and the wolf was soon out of breath. Then he had an idea. The chimney! He clambered up a handy oak tree onto the roof, only to find that &gt; there was no chimney, because the third little pig, being conscious of the environment, had installed electric heating. In his frustration, the wolf slipped and &gt; fell off the roof, breaking his left leg, and severely injuring his pride. As he limped away, the pigs laughed, and remarked how much more sensible it was to live &gt; in the city, where the only wolves were in the zoo. And so that is what they did, and of course they all lived happily ever after.</code></pre>
+</div>
+</div>
+<div id="text-compression-lesson" class="section level2" number="3.8">
+<h2>
+<span class="header-section-number">3.8</span> 컴퓨터 과학 핵심 개념<a class="anchor" aria-label="anchor" href="#text-compression-lesson"><i class="fas fa-link"></i></a>
+</h2>
+<p>컴퓨터 저장용량은 믿기 힘든 속도로 빠르게 늘어나고 있다.
+지난 25년간 일반인들이 사용하는 컴퓨터 저장용량은 백만 배 늘어났다.
+하지만, 컴퓨터에 저장할 더 많은 것이 있다.
+컴퓨터는 책 전체를 저장할 수 있고, 심지어 도서관의 모든 책, 음악, 영화도 저장공간만 허락된다면 저장할 수 있다.
+큰 파일은 다운로드 하는데 긴 시간이 걸려서 인터넷에서도 골치거리다.
+또한, 컴퓨터를 점점 더 소형화 하여 스마트폰과 스마트워치에 좀더 많은 정보가 저장되길 기대한다.</p>
+<p>하지만, 이 문제에 해결책은 있다. 더 많은 저장 공간이나 더 빠른 네트워크를 구축하는 대신에,
+데이터를 *압축해서** 적은 공간을 차지하도록 할 수 있다.
+데이터를 압축하고 압축을 푸는 과정은 컴퓨터가 자동으로 해준다.
+아프로 디스크는 점점 더 많은 정보를 저장하게 되고, 웹페이지는 더 빨리 화면에 정보를 뿌려주지만,
+실제로 컴퓨터가 더 많은 연산처리를 한다는 것에 주목해야 한다.</p>
+<p>많은 압축기법이 발명되었다. 이 활동에 사용된 방법이면서,
+먼저 출현한 텍스트를 가리키는 원칙을 가진 압축기법은 1970년대 두명의 이스라엘 교수님이 발명하신
+‘Ziv-Lempel coding,’ 줄여서 ‘LZ coding’ 이라고 한다.
+이 방법은 어떤 언어에도 사용될 수 있는 범용성이 있고, 쉽게 데이터 크기를 반으로 압축할 수도 있다.
+개인용 컴퓨터의 zip 파일을 지칭하기도 하고, GIF 이미지, 초고속 모뎀에도 사용된다. 모뎀의 경우 전화선을 통해서 전송에 필요한 데이터 양을 줄여 더 빨리 데이터가 &gt; 전송이 되도록 한다.</p>
+<p>더 많이 출현하는 문자가 다른 것보다 짧은 부호를 가져야 한다는 아이디어에 기초한
+다른 방법도 있다. 모스 부호(Morse code)가 이러한 아이디어를 차용했다.</p>
+</div>
+<div id="text-solution" class="section level2" number="3.9">
+<h2>
+<span class="header-section-number">3.9</span> 해답과 힌트<a class="anchor" aria-label="anchor" href="#text-solution"><i class="fas fa-link"></i></a>
+</h2>
+<div id="다시-말할-수-있어요-학습교구" class="section level3 unnumbered">
+<h3>다시 말할 수 있어요! (학습교구)<a class="anchor" aria-label="anchor" href="#%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94-%ED%95%99%EC%8A%B5%EA%B5%90%EA%B5%AC"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-figure"><img src="img/ch03-text/03-text-05-ohp.png"></div>
+</div>
+<div id="다시-말할-수-있어요" class="section level3 unnumbered">
+<h3>다시 말할 수 있어요!<a class="anchor" aria-label="anchor" href="#%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94"><i class="fas fa-link"></i></a>
+</h3>
+<p>Pease porridge hot,<br>
+Pease porridge cold,<br>
+Pease porridge in the pot,<br>
+Nine days old.</p>
+<p>Some like it hot,<br>
+Some like it cold,<br>
+Some like it in the pot,<br>
+Nine days old.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></div>
+<div class="next"><a href="checksum.html"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#text-compression"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></li>
+<li>
+<a class="nav-link" href="#activity-three"><span class="header-section-number">3.1</span> 활동 3</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94-2">개요</a></li>
+<li><a class="nav-link" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-2">교과학습 연계</a></li>
+<li><a class="nav-link" href="#%EA%B8%B0%EC%88%A0-2">기술</a></li>
+<li><a class="nav-link" href="#%EB%82%98%EC%9D%B4-2">나이</a></li>
+<li><a class="nav-link" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-2">학습 교재</a></li>
+<li><a class="nav-link" href="#compression-avi"><span class="header-section-number">3.1.1</span> 언플러그드 활동 동영상</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#text-compression-say-again"><span class="header-section-number">3.2</span> 다시 말할 수 있어요!</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-2"><span class="header-section-number">3.2.1</span> 들어가며</a></li>
+<li><a class="nav-link" href="#%EC%8B%9C%EC%97%B0-%EB%B0%8F-%ED%86%A0%EB%A1%A0"><span class="header-section-number">3.2.2</span> 시연 및 토론</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EA%B5%AC-%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94"><span class="header-section-number">3.3</span> 학습 교구: 다시 말할 수 있어요!</a></li>
+<li><a class="nav-link" href="#text-say-again"><span class="header-section-number">3.4</span> 학습 교구: 다시 말할 수 있어요!</a></li>
+<li><a class="nav-link" href="#text-compression-worksheet"><span class="header-section-number">3.5</span> 활동: 심화 문제</a></li>
+<li>
+<a class="nav-link" href="#text-compression-worksheet-short"><span class="header-section-number">3.6</span> 활동: 짧고 간결하게</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EC%97%AC%EA%B8%B0%EC%97%90%EC%84%9C-%EC%96%BC%EB%A7%88%EB%82%98-%EB%A7%8E%EC%9D%80-%EB%8B%A8%EC%96%B4%EB%A5%BC-%ED%95%84%EC%9A%94%EB%A1%9C-%ED%95%98%EB%82%98%EC%9A%94">여러분은 여기에서 얼마나 많은 단어를 필요로 하나요?</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#%ED%99%9C%EB%8F%99-%EC%8B%AC%ED%99%94-%EB%AC%B8%EC%A0%9C-%EC%83%81%EA%B8%89%EC%9E%90-text-compression-worksheet-advanced"><span class="header-section-number">3.7</span> 활동: 심화 문제 (상급자) {text-compression-worksheet-advanced}</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EC%A0%95%EB%A7%90%EB%A1%9C-%EC%96%B4%EB%A0%A4%EC%9A%B4-%EC%95%95%EC%B6%95%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%A0-%EC%A4%80%EB%B9%84%EA%B0%80-%EB%90%98%EC%85%A8%EB%82%98%EC%9A%94">정말로 어려운 압축에 도전할 준비가 되셨나요?</a></li></ul>
+</li>
+<li><a class="nav-link" href="#text-compression-lesson"><span class="header-section-number">3.8</span> 컴퓨터 과학 핵심 개념</a></li>
+<li>
+<a class="nav-link" href="#text-solution"><span class="header-section-number">3.9</span> 해답과 힌트</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94-%ED%95%99%EC%8A%B5%EA%B5%90%EA%B5%AC">다시 말할 수 있어요! (학습교구)</a></li>
+<li><a class="nav-link" href="#%EB%8B%A4%EC%8B%9C-%EB%A7%90%ED%95%A0-%EC%88%98-%EC%9E%88%EC%96%B4%EC%9A%94">다시 말할 수 있어요!</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

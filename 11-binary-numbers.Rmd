@@ -8,7 +8,7 @@ editor_options:
 
 ::: {#binary-number-cards .rmdnote}
 
-## 활동 1: 카드 점의 개수를 세다 {#activity-one}
+## 활동 1 {#activity-one}
 
 ### 개요 {.unnumbered}
 
@@ -50,7 +50,7 @@ editor_options:
 |:----------------------------------:|:----------------------------------:|
 | <iframe width="350" height="260" src="https://www.youtube.com/embed/Wy6-FXtLMV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> | <iframe width="350" height="260" src="https://www.youtube.com/embed/Jf033A_lBbA" frameborder="0" allowfullscreen></iframe> |
 
-## 이진수 {#binary-number-intro}
+## 카드 점의 개수를 세다: 이진수 {#binary-number-intro}
 
 ### 들어가며
 
@@ -96,8 +96,6 @@ editor_options:
 아이들이 개념을 이해할 때까지 몇 번 더 시도해 본다.
 
 학습 강화를 위해 다섯 가지 선택가능한 확장 활동이 있고, 아이들이 할 수 있으면 확장 활동을 가지고 많이 연습할 수 있게 합니다.
-
-::: {#binary-number-cards-worksheet .rmdnote}
 
 ## 활동: 이진수 {#binary-number-worksheet}
 

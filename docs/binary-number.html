@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>1 . 카드 점의 개수를 세다 - 이진수 | 데이터 과학 언플러그드</title>
 <meta name="author" content="한국 알(R) 사용자회">
-<meta name="description" content="1.1 활동 1: 카드 점의 개수를 세다  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수...">
+<meta name="description" content="1.1 활동 1  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수 (Counting) 매칭...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="1 . 카드 점의 개수를 세다 - 이진수 | 데이터 과학 언플러그드">
 <meta property="og:type" content="book">
-<meta property="og:description" content="1.1 활동 1: 카드 점의 개수를 세다  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수...">
+<meta property="og:description" content="1.1 활동 1  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수 (Counting) 매칭...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1 . 카드 점의 개수를 세다 - 이진수 | 데이터 과학 언플러그드">
-<meta name="twitter:description" content="1.1 활동 1: 카드 점의 개수를 세다  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수...">
+<meta name="twitter:description" content="1.1 활동 1  개요 컴퓨터의 데이터는 일련의 영과 일로 저장되고 전송된다. 단지 이 두 표식을 통해서 어떻게 언어와 숫자를 표현할 수 있을까?  교과학습 연계 수학: 숫자를 다른 진법으로 살펴보기. 이진법으로 숫자를 표현하기. 수학: 순열 패턴, 순열 패턴 규칙 기술하기. 이진법 패턴과 연관성  기술 계수 (Counting) 매칭...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -65,9 +65,13 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
-<li class="book-part">제 1 부</li>
-<li><a class="" href="data-structure.html">원재료</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
 <li><a class="active" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 스무고개 - 정보 이론</a></li>
 <li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
 </ul>
 
@@ -83,7 +87,7 @@
 <div id="binary-number-cards" class="rmdnote">
 <div id="activity-one" class="section level2" number="1.1">
 <h2>
-<span class="header-section-number">1.1</span> 활동 1: 카드 점의 개수를 세다<a class="anchor" aria-label="anchor" href="#activity-one"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1</span> 활동 1<a class="anchor" aria-label="anchor" href="#activity-one"><i class="fas fa-link"></i></a>
 </h2>
 <div id="개요" class="section level3 unnumbered">
 <h3>개요<a class="anchor" aria-label="anchor" href="#%EA%B0%9C%EC%9A%94"><i class="fas fa-link"></i></a>
@@ -160,7 +164,7 @@
 </div>
 <div id="binary-number-intro" class="section level2" number="1.3">
 <h2>
-<span class="header-section-number">1.3</span> 이진수<a class="anchor" aria-label="anchor" href="#binary-number-intro"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.3</span> 카드 점의 개수를 세다: 이진수<a class="anchor" aria-label="anchor" href="#binary-number-intro"><i class="fas fa-link"></i></a>
 </h2>
 <div id="들어가며" class="section level3" number="1.3.1">
 <h3>
@@ -201,7 +205,6 @@
 17은 이진수로 무엇일가요? (10001)</p>
 <p>아이들이 개념을 이해할 때까지 몇 번 더 시도해 본다.</p>
 <p>학습 강화를 위해 다섯 가지 선택가능한 확장 활동이 있고, 아이들이 할 수 있으면 확장 활동을 가지고 많이 연습할 수 있게 합니다.</p>
-<p>::: {#binary-number-cards-worksheet .rmdnote}</p>
 </div>
 </div>
 <div id="binary-number-worksheet" class="section level2" number="1.4">
@@ -450,14 +453,14 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="data-structure.html">원재료</a></div>
-<div class="next"><a href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></div>
+<div class="prev"><a href="data-structure-raw.html">원재료</a></div>
+<div class="next"><a href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#binary-number"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
 <li>
-<a class="nav-link" href="#activity-one"><span class="header-section-number">1.1</span> 활동 1: 카드 점의 개수를 세다</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#activity-one"><span class="header-section-number">1.1</span> 활동 1</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94">개요</a></li>
 <li><a class="nav-link" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84">교과학습 연계</a></li>
 <li><a class="nav-link" href="#%EA%B8%B0%EC%88%A0">기술</a></li>
@@ -467,7 +470,7 @@
 </li>
 <li><a class="nav-link" href="#binary-avi"><span class="header-section-number">1.2</span> 언플러그드 동영상</a></li>
 <li>
-<a class="nav-link" href="#binary-number-intro"><span class="header-section-number">1.3</span> 이진수</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#binary-number-intro"><span class="header-section-number">1.3</span> 카드 점의 개수를 세다: 이진수</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0"><span class="header-section-number">1.3.1</span> 들어가며</a></li>
 <li><a class="nav-link" href="#%ED%86%A0%EB%A1%A0"><span class="header-section-number">1.3.2</span> 토론</a></li>
 </ul>

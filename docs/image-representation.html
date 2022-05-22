@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 . 숫자로 색깔 표현하기 - 이미지 표현 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="2.1 활동 2  개요 컴퓨터는 습작물, 사진, 그림을 저장하는데 단지 숫자만을 사용한다. 다음의 활동은 컴퓨터가 어떻게 이러한 작업을 하는지를 보여준다.  교과학습 연계 수학: 기하학 레벨 2 이상. 모양과 공간 탐색.  기술 계수 (Counting) 도식화 (Graphing): 평면을 사각형의 격자로 잘게 나누어 채색하여 그림으로 &gt; 표현  나이...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="2 . 숫자로 색깔 표현하기 - 이미지 표현 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="2.1 활동 2  개요 컴퓨터는 습작물, 사진, 그림을 저장하는데 단지 숫자만을 사용한다. 다음의 활동은 컴퓨터가 어떻게 이러한 작업을 하는지를 보여준다.  교과학습 연계 수학: 기하학 레벨 2 이상. 모양과 공간 탐색.  기술 계수 (Counting) 도식화 (Graphing): 평면을 사각형의 격자로 잘게 나누어 채색하여 그림으로 &gt; 표현  나이...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 . 숫자로 색깔 표현하기 - 이미지 표현 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="2.1 활동 2  개요 컴퓨터는 습작물, 사진, 그림을 저장하는데 단지 숫자만을 사용한다. 다음의 활동은 컴퓨터가 어떻게 이러한 작업을 하는지를 보여준다.  교과학습 연계 수학: 기하학 레벨 2 이상. 모양과 공간 탐색.  기술 계수 (Counting) 도식화 (Graphing): 평면을 사각형의 격자로 잘게 나누어 채색하여 그림으로 &gt; 표현  나이...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
+<li><a class="active" href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 스무고개 - 정보 이론</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="image-representation" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2 . </span> 숫자로 색깔 표현하기 - 이미지 표현<a class="anchor" aria-label="anchor" href="#image-representation"><i class="fas fa-link"></i></a>
+</h1>
+<div id="binary-number-image" class="rmdnote">
+<div id="activity-two" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> 활동 2<a class="anchor" aria-label="anchor" href="#activity-two"><i class="fas fa-link"></i></a>
+</h2>
+<div id="개요-1" class="section level3 unnumbered">
+<h3>개요<a class="anchor" aria-label="anchor" href="#%EA%B0%9C%EC%9A%94-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>컴퓨터는 습작물, 사진, 그림을 저장하는데 단지 숫자만을 사용한다.
+다음의 활동은 컴퓨터가 어떻게 이러한 작업을 하는지를 보여준다.</p>
+</div>
+<div id="교과학습-연계-1" class="section level3 unnumbered">
+<h3>교과학습 연계<a class="anchor" aria-label="anchor" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>수학: 기하학 레벨 2 이상. 모양과 공간 탐색.</li>
+</ul>
+</div>
+<div id="기술-1" class="section level3 unnumbered">
+<h3>기술<a class="anchor" aria-label="anchor" href="#%EA%B8%B0%EC%88%A0-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>계수 (Counting)</li>
+<li>도식화 (Graphing): 평면을 사각형의 격자로 잘게 나누어 채색하여 그림으로 &gt; 표현</li>
+</ul>
+</div>
+<div id="나이-1" class="section level3 unnumbered">
+<h3>나이<a class="anchor" aria-label="anchor" href="#%EB%82%98%EC%9D%B4-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>7세 이상</li>
+</ul>
+</div>
+<div id="학습-교재-1" class="section level3 unnumbered">
+<h3>학습 교재<a class="anchor" aria-label="anchor" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>OHP 마스터에서 복사한 OHP 시트: 숫자로 색깔 표현하기</li>
+<li>아이마다 필요한 것<br>
+– 워크시트 활동: 어린이 팩스
+– 워크시트 활동: 자신만의 사진 만들기</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="image-avi" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> 언플러그드 동영상<a class="anchor" aria-label="anchor" href="#image-avi"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="70%">
+<col width="30%">
+</colgroup>
+<thead><tr class="header">
+<th align="center">영어</th>
+<th align="center">한국어</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center"><iframe width="350" height="260" src="https://www.youtube.com/embed/uaV2RuAJTjQ" ameborder="0" allowfullscreen> </iframe></td>
+<td align="center">-</td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="image-with-numbers" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> 숫자로 색깔 표현<a class="anchor" aria-label="anchor" href="#image-with-numbers"><i class="fas fa-link"></i></a>
+</h2>
+<div id="들어가며-1" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> 들어가며<a class="anchor" aria-label="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-1"><i class="fas fa-link"></i></a>
+</h3>
+<div id="토의-질문" class="section level4" number="2.3.1.1">
+<h4>
+<span class="header-section-number">2.3.1.1</span> 토의 질문<a class="anchor" aria-label="anchor" href="#%ED%86%A0%EC%9D%98-%EC%A7%88%EB%AC%B8"><i class="fas fa-link"></i></a>
+</h4>
+<ol style="list-style-type: decimal">
+<li>팩시밀리 기계(팩스, fax)는 무슨 일을 하나요?<br>
+</li>
+<li>컴퓨터가 어떤 상황에서 그림을 저장할 필요가 있나요? (그림을 그리는 프로그램, 그래픽 게임, 멀티미디어 시스템)</li>
+<li>컴퓨터는 숫자만 사용할 수 있는데 어떻게 그림을 저장할까요?</li>
+</ol>
+<p>(학습 활동을 위해서 아이들이 팩시밀리를 사용하여 메시지를 주고 받게 준비하는 것도 좋습니다.)</p>
+</div>
+<div id="ohp-시트를-사용한-시연" class="section level4" number="2.3.1.2">
+<h4>
+<span class="header-section-number">2.3.1.2</span> OHP 시트를 사용한 시연<a class="anchor" aria-label="anchor" href="#ohp-%EC%8B%9C%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EC%8B%9C%EC%97%B0"><i class="fas fa-link"></i></a>
+</h4>
+<div class="inline-figure"><img src="img/ch02-img/02-image-01-a-01.png" style="width:100.0%"></div>
+<p>컴퓨터 화면(computer screen)은 픽셀(<em>pixels</em>, <strong>pic</strong>ture <strong>el</strong>ements)로
+불리는 작은 점들의 격자로 나눠져 있다.</p>
+<p>흑백 그림에서 각 픽셀은 검은색이거나 하얀색이 된다.</p>
+<p>문자 “a”를 확대해서 픽셀을 살펴보자.
+컴퓨터가 그림을 저장할 때, 필요한 모든 것은 어느 점이 검은색이고,
+어느 점이 흰색인가하는 정보다.</p>
+<div class="inline-figure"><img src="img/ch02-img/02-image-01-a-02.png" style="width:100.0%"></div>
+<p>위 그림은 문자 “a” 그림이 어떻게 숫자로 표현되는지를 보여준다. 첫 번째 줄은 하얀 픽셀 하나,
+검은 픽셀 세 개, 시 하얀 픽셀 하나다. 그래서 첫 줄은 1,3,1로 표현된다.</p>
+<p>첫 번째 숫자는 항상 하얀 픽셀과 관계된다. 만약 첫 번째 픽셀이 검정색이면,
+첫번째 줄은 0으로 시작한다.</p>
+<p>17 쪽의 연습문제에는 방금 전에 보여준 방법을 활용하여 아이들이 복호화(decode)할
+그림이 있습니다.</p>
+</div>
+</div>
+</div>
+<div id="images-color" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> 학습 교구: 숫자로 색깔 표현하기<a class="anchor" aria-label="anchor" href="#images-color"><i class="fas fa-link"></i></a>
+</h2>
+<div class="figure">
+<img src="img/ch02-img/02-image-02-master-01.png" style="width:100.0%" alt=""><p class="caption">컴퓨터 화면에 보이는 “a” 문자. 문자 이미지”a”를 픽셀이 보이도록 확대한 뷰(view)</p>
+</div>
+<div class="figure">
+<img src="img/ch02-img/02-image-02-master-03.png" style="width:100.0%" alt=""><p class="caption">공백 격자 그리드(grid) (교수 목적 제공)</p>
+</div>
+</div>
+<div id="image-fax" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> 활동: 어린이 팩시밀리<a class="anchor" aria-label="anchor" href="#image-fax"><i class="fas fa-link"></i></a>
+</h2>
+<p>첫 번째 그림이 가장 쉽고, 마지막 그림이 가장 복잡하다. 실수하기 쉬워서 색칠할 연필과
+지우개를 사용하기를 권한다.</p>
+<div class="inline-figure"><img src="img/ch02-img/02-image-03-worksheet-01.png" style="width:100.0%"></div>
+<div class="inline-figure"><img src="img/ch02-img/02-image-03-worksheet-02.png" style="width:100.0%"></div>
+<div class="inline-figure"><img src="img/ch02-img/02-image-03-worksheet-03.png" style="width:100.0%"></div>
+</div>
+<div id="image-shadow" class="section level2" number="2.6">
+<h2>
+<span class="header-section-number">2.6</span> 활동: 자신만의 그림을 그리자<a class="anchor" aria-label="anchor" href="#image-shadow"><i class="fas fa-link"></i></a>
+</h2>
+<p>이제 숫자가 그림을 어떻게 표현하는지를 배웠습니다.
+친구를 위해서 여러분이 직접 그림을 만들어 보세요.
+위쪽 격자 그리드에 그림을 그리고, 다 그렸으면 아래쪽 격자
+그리드 옆에 숫자로 코드를 적으세요.
+점선을 따라서 자르고, 아래쪽 격자 그리드를 친구가 색칠하도록 전달해 주세요.
+(노트: 원치 않으면 전체 격자 그리드를 모두 사용하지 않아도 됩니다.
+그림이 격자 전체를 차지하지 않는다면, 아래 몇몇 줄을 공백 상태로 두세요.)</p>
+<div class="figure">
+<img src="img/ch02-img/02-image-04-worksheet-01.png" style="width:100.0%" alt=""><p class="caption">자신의 그림을 그려보세요</p>
+</div>
+<dl>
+<dd>
+아래를 절취하세요
+</dd>
+<hr>
+</dl>
+<div class="figure">
+<img src="img/ch02-img/02-image-04-worksheet-01.png" style="width:100.0%" alt=""><p class="caption">자신의 그림을 그려보세요</p>
+</div>
+</div>
+<div id="image-worksheet-advanced" class="section level2" number="2.7">
+<h2>
+<span class="header-section-number">2.7</span> 활동: 자신만의 그림을 그리자 (심화문제)<a class="anchor" aria-label="anchor" href="#image-worksheet-advanced"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>심화문제</strong>: 채색된 이미지를 표현하려면, 색깔을 표현하는 숫자를 사용한다. (예, 0 은 검정,
+1 은 빨강, 2 는 녹색 등) 두 숫자로 픽셀을 표시한다: 첫 번째 숫자는 전에 표기한 것과
+같고 두 번째 숫자가 색깔을 표시한다.
+친구를 위해 색깔 그림을 만들어 보세요.
+각 숫자가 무슨 색깔을 의미하는지를 사전에 친구에게 알려주는 것을 잊지 마세요.</p>
+<div class="figure">
+<img src="img/ch02-img/02-image-04-worksheet-01.png" style="width:100.0%" alt=""><p class="caption">색상이 있는 자신만의 그림을 그려보세요</p>
+</div>
+<dl>
+<dd>
+아래를 절취하세요
+</dd>
+<hr>
+</dl>
+<div class="figure">
+<img src="img/ch02-img/02-image-04-worksheet-01.png" style="width:100.0%" alt=""><p class="caption">색상이 있는 자신만의 그림을 그려보세요</p>
+</div>
+<div id="변형과-확장" class="section level3 unnumbered">
+<h3>변형과 확장<a class="anchor" aria-label="anchor" href="#%EB%B3%80%ED%98%95%EA%B3%BC-%ED%99%95%EC%9E%A5"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>격자 위에 종이에 그려보세요. 최종 이미지를 격자 그리드 없이 볼 수 있게 해보세요. 이미지가 훨씬 더 선명해 니다.<br>
+</li>
+<li>격자 그리드에 색깔을 칠하는 대신에 좀더 커다란 격자 그리드 위에 아이들이 사각형 스티커 종이를 사용하거나 체를 놓을 수도 있어요.</li>
+</ol>
+</div>
+<div id="토의점" class="section level3 unnumbered">
+<h3>토의점<a class="anchor" aria-label="anchor" href="#%ED%86%A0%EC%9D%98%EC%A0%90"><i class="fas fa-link"></i></a>
+</h3>
+<p>길이가 이진수로 표현되기 때문에, 픽셀 길이에 제한이 있는 것이 보통입니다.<br>
+만약 7 까지만 숫자를 사용할 수 있는데, 어떻게 12 개 검정 픽셀을 표현할 수 있을까요?
+(좋은 방법은 일련의 7 개 검정 픽셀, 0 개 하얀색 픽셀, 그리고 일련의 5개 검정 픽셀로 표현하는 것입니다.)</p>
+</div>
+</div>
+<div id="image-lesson" class="section level2" number="2.8">
+<h2>
+<span class="header-section-number">2.8</span> 컴퓨터 과학 핵심 개념<a class="anchor" aria-label="anchor" href="#image-lesson"><i class="fas fa-link"></i></a>
+</h2>
+<p>팩시밀리 기계는 흑백 종이를 약 1000 × 2000 픽셀로 스캔해서 모뎀을 사용하여 다른
+팩시밀리 기계에 보내는 정말 단순한 컴퓨터다.
+다른 팩시밀리 기계는 전송 받은 픽셀을 종이에 출력한다.
+종종, 팩스 이미지가 넓은 흰 공백(예, 한계(margin)) 혹은 검은 픽셀 (예, 가로줄)을 가지고 있다.
+색깔 있는 그림은 훨씬 더 많은 중복이 있다. 이런 이미지를 저장하려고
+필요한 많은 저장공간을 절약하기 위해서, 프로그래머는 다양한 압축 기술을 사용한다.
+여기서 사용되는 방법은 “런 길이 부호화(run-length coding)”로 불리고, 이미지를 압축하는 효과적인 방법이다.
+이미지를 압축하지 않으면, 사진을 보내는데 오랜 시간이 걸리고 추가로 더 많은 저장공간이 필요하다.
+따라서, 웹페이지에 사진을 게시하거나 팩스를 보내는 것이 가능하지 않을 수 있다.
+예를 들어, 팩스 이미지는 일반적으로 원본 크기의 7 분의 1 로 압축된다.
+압축 없이 전송하는데는 7 배 많은 시간이 걸린다.</p>
+<p>사진과 그림은 다양한 압축기법을 사용하여 원본의 10분의 1, 혹은 100분의 1의 크기로 압축된다.
+이렇게 압축해서 더 많은 이미지를 동일한 디스크에 저장할 수 있고,
+인터넷을 통해서 사진과 그림을 보는데 짧은 시간내에 볼 수 있다는 의미가 된다.</p>
+<p>프로그래머는 적절한 압축 기법을 선택해서 이미지를 전송할 수 있다.</p>
+<div class="figure">
+<img src="img/ch02-img/02-image-05-core-concept.png" alt=""><p class="caption">핵심 개념</p>
+</div>
+</div>
+<div id="image-solution" class="section level2" number="2.9">
+<h2>
+<span class="header-section-number">2.9</span> 해답과 힌트<a class="anchor" aria-label="anchor" href="#image-solution"><i class="fas fa-link"></i></a>
+</h2>
+<div id="어린이-팩시밀리-워크시트-정답" class="section level3 unnumbered">
+<h3>어린이 팩시밀리 워크시트 정답<a class="anchor" aria-label="anchor" href="#%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%8C%A9%EC%8B%9C%EB%B0%80%EB%A6%AC-%EC%9B%8C%ED%81%AC%EC%8B%9C%ED%8A%B8-%EC%A0%95%EB%8B%B5"><i class="fas fa-link"></i></a>
+</h3>
+<p><img src="img/ch02-img/02-image-06-hint-solution-01.png" style="width:100.0%"><img src="img/ch02-img/02-image-06-hint-solution-02.png" style="width:100.0%"><img src="img/ch02-img/02-image-06-hint-solution-03.png" style="width:100.0%"></p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></div>
+<div class="next"><a href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#image-representation"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></li>
+<li>
+<a class="nav-link" href="#activity-two"><span class="header-section-number">2.1</span> 활동 2</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94-1">개요</a></li>
+<li><a class="nav-link" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-1">교과학습 연계</a></li>
+<li><a class="nav-link" href="#%EA%B8%B0%EC%88%A0-1">기술</a></li>
+<li><a class="nav-link" href="#%EB%82%98%EC%9D%B4-1">나이</a></li>
+<li><a class="nav-link" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-1">학습 교재</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#image-avi"><span class="header-section-number">2.2</span> 언플러그드 동영상</a></li>
+<li>
+<a class="nav-link" href="#image-with-numbers"><span class="header-section-number">2.3</span> 숫자로 색깔 표현</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-1"><span class="header-section-number">2.3.1</span> 들어가며</a></li></ul>
+</li>
+<li><a class="nav-link" href="#images-color"><span class="header-section-number">2.4</span> 학습 교구: 숫자로 색깔 표현하기</a></li>
+<li><a class="nav-link" href="#image-fax"><span class="header-section-number">2.5</span> 활동: 어린이 팩시밀리</a></li>
+<li><a class="nav-link" href="#image-shadow"><span class="header-section-number">2.6</span> 활동: 자신만의 그림을 그리자</a></li>
+<li>
+<a class="nav-link" href="#image-worksheet-advanced"><span class="header-section-number">2.7</span> 활동: 자신만의 그림을 그리자 (심화문제)</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EB%B3%80%ED%98%95%EA%B3%BC-%ED%99%95%EC%9E%A5">변형과 확장</a></li>
+<li><a class="nav-link" href="#%ED%86%A0%EC%9D%98%EC%A0%90">토의점</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#image-lesson"><span class="header-section-number">2.8</span> 컴퓨터 과학 핵심 개념</a></li>
+<li>
+<a class="nav-link" href="#image-solution"><span class="header-section-number">2.9</span> 해답과 힌트</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EC%96%B4%EB%A6%B0%EC%9D%B4-%ED%8C%A9%EC%8B%9C%EB%B0%80%EB%A6%AC-%EC%9B%8C%ED%81%AC%EC%8B%9C%ED%8A%B8-%EC%A0%95%EB%8B%B5">어린이 팩시밀리 워크시트 정답</a></li></ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
