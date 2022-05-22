@@ -1,7 +1,7 @@
 --- 
 title: "데이터 과학 언플러그드"
 author: "한국 알(R) 사용자회"
-date: "2022-05-21"
+date: "2022-05-22"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

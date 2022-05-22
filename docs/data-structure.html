@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>원재료 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="정보를 나타내는 원재료 — 데이터 점의 개수를 세다—이진수 숫자로 색깔 표현하기—이미지 표현 다시 말할 수 있어요!—텍스트 압축 카드 뒤집기 마술—오류 탐지 및 수정 질문 20개—정보 이론 데이터: 정보를 나타내는 원재료 컴퓨터로 정보를 어떻게 저장할까요? 컴퓨터(Computer)라는 말은 라틴어 'computare'에 기원하는데 계산하고 더한다는...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="원재료 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="정보를 나타내는 원재료 — 데이터 점의 개수를 세다—이진수 숫자로 색깔 표현하기—이미지 표현 다시 말할 수 있어요!—텍스트 압축 카드 뒤집기 마술—오류 탐지 및 수정 질문 20개—정보 이론 데이터: 정보를 나타내는 원재료 컴퓨터로 정보를 어떻게 저장할까요? 컴퓨터(Computer)라는 말은 라틴어 'computare'에 기원하는데 계산하고 더한다는...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="원재료 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="정보를 나타내는 원재료 — 데이터 점의 개수를 세다—이진수 숫자로 색깔 표현하기—이미지 표현 다시 말할 수 있어요!—텍스트 압축 카드 뒤집기 마술—오류 탐지 및 수정 질문 20개—정보 이론 데이터: 정보를 나타내는 원재료 컴퓨터로 정보를 어떻게 저장할까요? 컴퓨터(Computer)라는 말은 라틴어 'computare'에 기원하는데 계산하고 더한다는...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">제 1 부</li>
+<li><a class="active" href="data-structure.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="data-structure" class="section level1 unnumbered">
+<h1>원재료<a class="anchor" aria-label="anchor" href="#data-structure"><i class="fas fa-link"></i></a>
+</h1>
+<p><strong>정보를 나타내는 원재료 — 데이터</strong></p>
+<ul>
+<li>
+<a href="01-binary-numbers.html">점의 개수를 세다—이진수</a><br>
+</li>
+<li>
+<a href="02-image-representation.html">숫자로 색깔 표현하기—이미지 표현</a><br>
+</li>
+<li>
+<a href="03-text-compression.html">다시 말할 수 있어요!—텍스트 압축</a><br>
+</li>
+<li>
+<a href="04-checksum.html">카드 뒤집기 마술—오류 탐지 및 수정</a><br>
+</li>
+<li><a href="05-info-theory.html">질문 20개—정보 이론</a></li>
+</ul>
+<p><strong>데이터: 정보를 나타내는 원재료</strong></p>
+<p><strong>컴퓨터로 정보를 어떻게 저장할까요?</strong></p>
+<p>컴퓨터(Computer)라는 말은 라틴어 '<em>computare</em>'에 기원하는데 계산하고 더한다는 의미를 지니지만, 오늘날 컴퓨터는 거대한 계산기 이상이다. 컴퓨터는 도서관도 될 수 있으며, 컴퓨터로 글을 작성할 수 있으며, 정보를 찾고, 음악을 연주하고, 영화를 보기도 한다. 그런데 컴퓨터는 이렇게 많은 모든 정보를 어떻게 저장할까? 믿든 믿지 않든, 컴퓨터는 단지 두 가지만을 사용한다. 영('0')과 일('1')이다.</p>
+<p><strong>데이터와 정보의 차이는 무얼까?</strong></p>
+<p>데이터는 원재료, 즉 컴퓨터가 작업하는 숫자다.
+컴퓨터는 여러분과 내가 이해할 수 있는 데이터를 정보(문자, 숫자, 그림)로 변환한다.</p>
+<p><strong>숫자, 글자, 단어, 그림이 어떻게 영('0')과 일('1')로 변환될까?</strong></p>
+<p>제 1부에서는 이진수(binary number)가 무엇인지, 컴퓨터가 어떻게 그림을 그리는지, 팩시밀리 송수신기가 어떻게 동작하고, 대량의 정보를 저장하는 효율적인 방법이 무엇인지, 오류가 생기는 것을 어떻게 막을 수 있는지, 그리고 저장하려는 정보의 양을 어떻게 측정되는지를 배울 것이다.</p>
+<div class="inline-figure"><img src="img/01-part-one.png" style="width:100.0%"></div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html">데이터 과학 언플러그드</a></div>
+<div class="next"><a href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#data-structure">원재료</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

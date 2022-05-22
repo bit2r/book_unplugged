@@ -65,6 +65,9 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">제 1 부</li>
+<li><a class="" href="data-structure.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
 <li><a class="active" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
 </ul>
 
@@ -90,7 +93,7 @@ Fox, John, and Milan Bouchet-Valat. 2021. <em><span>Rcmdr: R Commander</span></e
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html">데이터 과학 언플러그드</a></div>
+<div class="prev"><a href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
@@ -110,7 +113,7 @@ Fox, John, and Milan Bouchet-Valat. 2021. <em><span>Rcmdr: R Commander</span></e
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-21.</p>
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -118,6 +121,34 @@ Fox, John, and Milan Bouchet-Valat. 2021. <em><span>Rcmdr: R Commander</span></e
   </div>
 
 </div></div>
-</footer>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
 </body>
 </html>
