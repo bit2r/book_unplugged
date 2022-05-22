@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>13 . 프로그래밍 언어 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="13.1 활동 13  개요 대체로 컴퓨터는 제한된 명령어 어휘로 구성된 “언어”로 프로그래밍됩니다. 프로그래밍에 대한 가장 힘든 부분 중의 하나는 컴퓨터가 말도 안되는 결과를 생성하더라도, 지시사항을 글자 한자까지도 지키다는 것입니다. 이번 활동을 통해서 아이들은 프로그래밍의 이러한 점을 경험할 것입니다.  교과학습 연계 영어 : 대인 관계 듣기...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="13 . 프로그래밍 언어 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="13.1 활동 13  개요 대체로 컴퓨터는 제한된 명령어 어휘로 구성된 “언어”로 프로그래밍됩니다. 프로그래밍에 대한 가장 힘든 부분 중의 하나는 컴퓨터가 말도 안되는 결과를 생성하더라도, 지시사항을 글자 한자까지도 지키다는 것입니다. 이번 활동을 통해서 아이들은 프로그래밍의 이러한 점을 경험할 것입니다.  교과학습 연계 영어 : 대인 관계 듣기...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="13 . 프로그래밍 언어 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="13.1 활동 13  개요 대체로 컴퓨터는 제한된 명령어 어휘로 구성된 “언어”로 프로그래밍됩니다. 프로그래밍에 대한 가장 힘든 부분 중의 하나는 컴퓨터가 말도 안되는 결과를 생성하더라도, 지시사항을 글자 한자까지도 지키다는 것입니다. 이번 활동을 통해서 아이들은 프로그래밍의 이러한 점을 경험할 것입니다.  교과학습 연계 영어 : 대인 관계 듣기...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 정보 이론</a></li>
+<li class="book-part">CS: 제 2 부</li>
+<li><a class="" href="algorithm.html">알고리즘</a></li>
+<li><a class="" href="searching-algorithms.html"><span class="header-section-number">6</span> 검색 알고리즘</a></li>
+<li><a class="" href="sorting-algorithms.html"><span class="header-section-number">7</span> 정렬 알고리즘</a></li>
+<li><a class="" href="sorting-networks.html"><span class="header-section-number">8</span> 정렬 네트워크</a></li>
+<li><a class="" href="minimal-spanning-tree.html"><span class="header-section-number">9</span> 최소생성나무</a></li>
+<li><a class="" href="orange-game.html"><span class="header-section-number">10</span> 네트워크 라우팅과 교착</a></li>
+<li><a class="" href="internet.html"><span class="header-section-number">11</span> 네트워크 통신 프로토콜</a></li>
+<li class="book-part">CS: 제 3 부</li>
+<li><a class="" href="language-part-three.html">언어</a></li>
+<li><a class="" href="fsm.html"><span class="header-section-number">12</span> 유한상태 오토마타</a></li>
+<li><a class="active" href="languages.html"><span class="header-section-number">13</span> 프로그래밍 언어</a></li>
+<li class="book-part">CS: 제 4 부</li>
+<li><a class="" href="intractability-part-four.html">난해한 문제</a></li>
+<li><a class="" href="graph-coloring.html"><span class="header-section-number">14</span> 그래프 색칠하기</a></li>
+<li><a class="" href="dominating-sets.html"><span class="header-section-number">15</span> 지배 집합</a></li>
+<li><a class="" href="steiner-trees.html"><span class="header-section-number">16</span> 스타이너 트리</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="languages" class="section level1" number="13">
+<h1>
+<span class="header-section-number">13 . </span> 프로그래밍 언어<a class="anchor" aria-label="anchor" href="#languages"><i class="fas fa-link"></i></a>
+</h1>
+<div id="programming-activity" class="rmdnote">
+<div id="activity-13" class="section level2" number="13.1">
+<h2>
+<span class="header-section-number">13.1</span> 활동 13<a class="anchor" aria-label="anchor" href="#activity-13"><i class="fas fa-link"></i></a>
+</h2>
+<div id="개요-12" class="section level3 unnumbered">
+<h3>개요<a class="anchor" aria-label="anchor" href="#%EA%B0%9C%EC%9A%94-12"><i class="fas fa-link"></i></a>
+</h3>
+<p>대체로 컴퓨터는 제한된 명령어 어휘로 구성된 “언어”로 프로그래밍됩니다.
+프로그래밍에 대한 가장 힘든 부분 중의 하나는 컴퓨터가 말도 안되는 결과를 생성하더라도,
+지시사항을 글자 한자까지도 지키다는 것입니다. 이번 활동을 통해서 아이들은 프로그래밍의 이러한 점을 경험할 것입니다.</p>
+</div>
+<div id="교과학습-연계-12" class="section level3 unnumbered">
+<h3>교과학습 연계<a class="anchor" aria-label="anchor" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-12"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>영어 : 대인 관계 듣기 레벨 3</li>
+</ul>
+</div>
+<div id="기술-12" class="section level3 unnumbered">
+<h3>기술<a class="anchor" aria-label="anchor" href="#%EA%B8%B0%EC%88%A0-12"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>지침을 주고 받는 것을 이해하기</li>
+</ul>
+</div>
+<div id="나이-12" class="section level3 unnumbered">
+<h3>나이<a class="anchor" aria-label="anchor" href="#%EB%82%98%EC%9D%B4-12"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>7세 이상</li>
+</ul>
+</div>
+<div id="학습-교재-12" class="section level3 unnumbered">
+<h3>학습 교재<a class="anchor" aria-label="anchor" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-12"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>선생님이 필요한 것
+<ul>
+<li>다음에 그려진 것 같은 그림 카드<br>
+</li>
+</ul>
+</li>
+<li>아아마다 필요한 것
+<ul>
+<li>연필, 종이, 자</li>
+</ul>
+</li>
+</ul>
+<div class="inline-figure"><img src="img/ch12-language/12-language-01-picture.png" style="width:100.0%"></div>
+</div>
+</div>
+</div>
+<div id="lang-avi" class="section level2" number="13.2">
+<h2>
+<span class="header-section-number">13.2</span> 언플러그드 동영상<a class="anchor" aria-label="anchor" href="#lang-avi"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="50%">
+<col width="49%">
+</colgroup>
+<thead><tr class="header">
+<th align="right">구분</th>
+<th align="center">동영상</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">순차적 실행</td>
+<td align="center"><iframe width="150" src="https://www.youtube.com/embed/xaW3PAzHxCU?list=PLzdnOPI1iJNerXmhWGR_V-8vWPe0v62DE" frameborder="0" allowfullscreen>순차적 실행 </iframe></td>
+</tr>
+<tr class="even">
+<td align="right">함수(I) :</td>
+<td align="center">: <iframe width="150" src="https://www.youtube.com/embed/hx0tBso08aA?list=PLzdnOPI1iJNerXmhWGR_V-8vWPe0v62DE" frameborder="0" allowfullscreen> </iframe>
+</td>
+</tr>
+<tr class="odd">
+<td align="right">함수(II) :</td>
+<td align="center">: <iframe width="150" src="https://www.youtube.com/embed/NAViNTHS3LU?list=PLzdnOPI1iJNerXmhWGR_V-8vWPe0v62DE" frameborder="0" allowfullscreen> </iframe>
+</td>
+</tr>
+<tr class="even">
+<td align="right">조건문 :</td>
+<td align="center">: <iframe width="150" src="https://www.youtube.com/embed/yr6g0AWE7yw?list=PLzdnOPI1iJNerXmhWGR_V-8vWPe0v62DE" frameborder="0" allowfullscreen> </iframe>
+</td>
+</tr>
+<tr class="odd">
+<td align="right">릴레이 프로그래밍 :</td>
+<td align="center">: <iframe width="150" src="https://www.youtube.com/embed/FFpvtooUrzg?list=PLzdnOPI1iJNerXmhWGR_V-8vWPe0v62DE" frameborder="0" allowfullscreen> </iframe>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="language-marching-order" class="section level2" number="13.3">
+<h2>
+<span class="header-section-number">13.3</span> 진군 명령<a class="anchor" aria-label="anchor" href="#language-marching-order"><i class="fas fa-link"></i></a>
+</h2>
+<div id="들어가며-7" class="section level3" number="13.3.1">
+<h3>
+<span class="header-section-number">13.3.1</span> 들어가며<a class="anchor" aria-label="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-7"><i class="fas fa-link"></i></a>
+</h3>
+<p>사람이 지시 명령대로만 움직여 복종하는 것이 좋은 것인지를 토론하자.
+예를 들어, 만약 여러분이 닫혀있는 문을 가리키며 “그 문을 통과하십시오”라고 하면 무슨 일이 발생할까요?</p>
+<p>컴퓨터는 주어진 명령 목록 그대로 수행합니다.
+비록 상식적으로 납득이 가지 않는 것도 정확하게 명령 목록에 적혀진 그대로 수행합니다.</p>
+</div>
+<div id="시연-예제" class="section level3" number="13.3.2">
+<h3>
+<span class="header-section-number">13.3.2</span> 시연 예제<a class="anchor" aria-label="anchor" href="#%EC%8B%9C%EC%97%B0-%EC%98%88%EC%A0%9C"><i class="fas fa-link"></i></a>
+</h3>
+<p>아래 지시사항을 따라서 아이들이 그림을 그릴 수 있는지 살펴봅시다.</p>
+<ol style="list-style-type: decimal">
+<li><p>아래 사각형 중간에 점을 그리세요.</p></li>
+<li><p>왼쪽 상단 모서리에서 시작해 가운데 점을 지나 오른쪽 아래 모서리에서 끝나는 직선을 그으세요.</p></li>
+<li><p>왼쪽 아래 모서리에서 시작해 가운데 점을 지나 오른쪽 위 모서리에서 끝나는 직선을 그으세요.</p></li>
+<li><p>왼쪽 중간 삼각형에 자신의 이름을 쓰세요.</p></li>
+<li><p>결과를 확인하고 친구의 그림과 비교해 보세요.</p></li>
+</ol>
+<p>결과는 아래와 같은 느낌입니다.</p>
+<div class="inline-figure"><img src="img/ch12-language/12-language-02-name.png" style="width:100.0%"></div>
+</div>
+</div>
+<div id="language-worksheet" class="section level2" number="13.4">
+<h2>
+<span class="header-section-number">13.4</span> 활동<a class="anchor" aria-label="anchor" href="#language-worksheet"><i class="fas fa-link"></i></a>
+</h2>
+<p>아이를 골라서 개요에 나와 있는 것과 같은 그림을 주세요.
+학급의 아이들이 그림을 그릴 수 있도록 선택된 아이가 그림을 묘사합니다.
+아이들이 질문을 통해서 묘사하는 지침을 명확히 할 수 있습니다.
+이번 활동의 목적은 얼마나 빠르고 정확하게 완료하는지를 확인하는 것입니다.</p>
+<p>동일한 활동을 반복하지만, 이번에는 아이들이 질문을 할 수 없습니다.
+이번 활동은 아이들이 빨리 쫓아가기가 어렵기 때문에, 좀더 간단한 이미지를 사용하는 것을 권장합니다.</p>
+<p>스크린 뒤에서 아이가 지침만 전달하는 방식으로 진행합니다.
+이번 활동에서는 어떠한 질문도 허용되지 않고, 커뮤니케이션이 단지 지침의 형태로만 전달됩니다.</p>
+<p>마지막 종류의 커뮤니케이션 방식이 프로그램을 작성할 때 프로그래머가 경험하는 것과 동일하다는 것을 일러줍니다.
+프로그래머가 컴퓨터에 명령문을 전달하지만, 나중에 실행해 보기까지는 결과를 알 수 없습니다.</p>
+<p>아이에게 그림을 그리고 명령문을 작성하게 합니다.
+짝을 지어서 혹은 전체 학급이 실습을 진행합니다.</p>
+<div id="변형" class="section level3" number="13.4.1">
+<h3>
+<span class="header-section-number">13.4.1</span> 변형<a class="anchor" aria-label="anchor" href="#%EB%B3%80%ED%98%95"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>종이 비행기를 만드는 명령문을 적어보세요.</p></li>
+<li><p>“앞으로 x 미터 전진하세요”, “90도 왼쪽으로 도세요”, “90도 오른쪽으로 도세요” 같은
+명령문을 사용하여 학교 비밀장소에 도착하는 명령문을 작성해 보세요.<br>
+아이들은 자신들이 생각한 결과를 얻을 때까지 명령문을 시험하고 가다듬어야 합니다.</p></li>
+<li><p>눈가리개 게임. 아이 한명의 눈을 눈가리개로 가리고,
+지시 명령문에 따라 교실 여기저기를 돌아다니게 해 보세요.</p></li>
+</ol>
+</div>
+</div>
+<div id="language-lesson" class="section level2" number="13.5">
+<h2>
+<span class="header-section-number">13.5</span> 컴퓨터 과학 핵심 개념<a class="anchor" aria-label="anchor" href="#language-lesson"><i class="fas fa-link"></i></a>
+</h2>
+<p>컴퓨터는 프로그램(Program)이라고 불리는 명령 목록에 따라 동작합니다.
+프로그램은 특별한 작업을 수행하도록 작성되었습니다.
+프로그램은 한정된 명령문의 집합으로 특별히 설계된 언어로 작성되었습니다.
+프로그램은 컴퓨터가 무엇을 수행해야 하는지를 담고 있습니다.
+특정 언어는 다른 언어보다 특정 목적을 수행하는데 더 적합합니다.</p>
+<p>어떤 언어를 사용하든지, 프로그래머는 컴퓨터에 실행시키고자 하는 것을 정확하게 전달하는데 능숙해야 합니다.
+인간과 달리, 컴퓨터는 터무니 없는 것일지라도 지시명령문의 글자 그대로 수행합니다.</p>
+<p>프로그램이 올바르게 작성되었는지도 확인하는 것도 매우 중요합니다. 작은 오류가 아주 큰 문제를 일으킬 수 있습니다.
+우주 왕복선 발사, 원자력 발전소, 철도 신호 등 컴퓨터 프로그램의 사소한 오류조차도 발생할 엄청난 결과를 상상해 보세요.
+1940년대 초 전자계산기가 고장이 났을 때 내부 전기 릴레이에서 나방 한마리를 제거( “debugged”)해서 고장을 고쳤습니다.
+이를 기념하여 오류를 버그(“bug”)라고 하며, 오류 제거하는 것을 “디버깅(debugging”, “벌레 잡기”)라고 부르게 되었습니다.</p>
+<p>프로그램이 복잡해질수록, 더 많은 오류가 발생할 가능성은 높아집니다.
+미국이 전략방위구상 스타워즈 (“Star Wars”) 프로그램을 진행할 때 커다란 이슈가 되었습니다.
+이 프로그램은 핵 공격에 대항해 난공불락의 방어체계를 구축하는 컴퓨터로 제어되는 시스템을 구축하고자 했습니다.
+몇몇 컴퓨터 과학자는 소프트웨어의 복잡성과 내재된 저신뢰성으로 실현 불가능하다고 주장하였습니다.
+가능한 많은 버그를 잡기 위해 소프트웨어를 테스트를 할 수는 있지만,
+누군가 미국을 향해서 미사일을 발사해서 실제 시스템을 제대로 동작하는지 시험해야 하는데 이것은 현실적으로 불가능하기 때문입니다.</p>
+<div class="inline-figure"><img src="img/ch12-language/12-language-03-bug.png" style="width:100.0%"></div>
+
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="fsm.html"><span class="header-section-number">12</span> 유한상태 오토마타</a></div>
+<div class="next"><a href="intractability-part-four.html">난해한 문제</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#languages"><span class="header-section-number">13</span> 프로그래밍 언어</a></li>
+<li>
+<a class="nav-link" href="#activity-13"><span class="header-section-number">13.1</span> 활동 13</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94-12">개요</a></li>
+<li><a class="nav-link" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-12">교과학습 연계</a></li>
+<li><a class="nav-link" href="#%EA%B8%B0%EC%88%A0-12">기술</a></li>
+<li><a class="nav-link" href="#%EB%82%98%EC%9D%B4-12">나이</a></li>
+<li><a class="nav-link" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-12">학습 교재</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#lang-avi"><span class="header-section-number">13.2</span> 언플러그드 동영상</a></li>
+<li>
+<a class="nav-link" href="#language-marching-order"><span class="header-section-number">13.3</span> 진군 명령</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0-7"><span class="header-section-number">13.3.1</span> 들어가며</a></li>
+<li><a class="nav-link" href="#%EC%8B%9C%EC%97%B0-%EC%98%88%EC%A0%9C"><span class="header-section-number">13.3.2</span> 시연 예제</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#language-worksheet"><span class="header-section-number">13.4</span> 활동</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EB%B3%80%ED%98%95"><span class="header-section-number">13.4.1</span> 변형</a></li></ul>
+</li>
+<li><a class="nav-link" href="#language-lesson"><span class="header-section-number">13.5</span> 컴퓨터 과학 핵심 개념</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

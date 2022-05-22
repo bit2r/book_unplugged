@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>언어 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="컴퓨터에 무엇을 수행할지 지시하기 — 절차의 표현 보물 찾기 — 유한상태 오토마타 진군 명령 — 프로그래밍 언어 컴퓨터에 무엇을 수행할지 지시하기 컴퓨터는 초당 수백만번 명령에 따라 움직입니다. 컴퓨터에 무엇을 수행해야 할지 지시하기 위해서, 올바른 명령을 주면 좋겠지만, 말처럼 생각만큼 쉬운 일이 아닙니다. 우리는 명령을 받았을 때, 명령의 의미를...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="언어 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="컴퓨터에 무엇을 수행할지 지시하기 — 절차의 표현 보물 찾기 — 유한상태 오토마타 진군 명령 — 프로그래밍 언어 컴퓨터에 무엇을 수행할지 지시하기 컴퓨터는 초당 수백만번 명령에 따라 움직입니다. 컴퓨터에 무엇을 수행해야 할지 지시하기 위해서, 올바른 명령을 주면 좋겠지만, 말처럼 생각만큼 쉬운 일이 아닙니다. 우리는 명령을 받았을 때, 명령의 의미를...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="언어 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="컴퓨터에 무엇을 수행할지 지시하기 — 절차의 표현 보물 찾기 — 유한상태 오토마타 진군 명령 — 프로그래밍 언어 컴퓨터에 무엇을 수행할지 지시하기 컴퓨터는 초당 수백만번 명령에 따라 움직입니다. 컴퓨터에 무엇을 수행해야 할지 지시하기 위해서, 올바른 명령을 주면 좋겠지만, 말처럼 생각만큼 쉬운 일이 아닙니다. 우리는 명령을 받았을 때, 명령의 의미를...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 정보 이론</a></li>
+<li class="book-part">CS: 제 2 부</li>
+<li><a class="" href="algorithm.html">알고리즘</a></li>
+<li><a class="" href="searching-algorithms.html"><span class="header-section-number">6</span> 검색 알고리즘</a></li>
+<li><a class="" href="sorting-algorithms.html"><span class="header-section-number">7</span> 정렬 알고리즘</a></li>
+<li><a class="" href="sorting-networks.html"><span class="header-section-number">8</span> 정렬 네트워크</a></li>
+<li><a class="" href="minimal-spanning-tree.html"><span class="header-section-number">9</span> 최소생성나무</a></li>
+<li><a class="" href="orange-game.html"><span class="header-section-number">10</span> 네트워크 라우팅과 교착</a></li>
+<li><a class="" href="internet.html"><span class="header-section-number">11</span> 네트워크 통신 프로토콜</a></li>
+<li class="book-part">CS: 제 3 부</li>
+<li><a class="active" href="language-part-three.html">언어</a></li>
+<li><a class="" href="fsm.html"><span class="header-section-number">12</span> 유한상태 오토마타</a></li>
+<li><a class="" href="languages.html"><span class="header-section-number">13</span> 프로그래밍 언어</a></li>
+<li class="book-part">CS: 제 4 부</li>
+<li><a class="" href="intractability-part-four.html">난해한 문제</a></li>
+<li><a class="" href="graph-coloring.html"><span class="header-section-number">14</span> 그래프 색칠하기</a></li>
+<li><a class="" href="dominating-sets.html"><span class="header-section-number">15</span> 지배 집합</a></li>
+<li><a class="" href="steiner-trees.html"><span class="header-section-number">16</span> 스타이너 트리</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="language-part-three" class="section level1 unnumbered">
+<h1>언어<a class="anchor" aria-label="anchor" href="#language-part-three"><i class="fas fa-link"></i></a>
+</h1>
+<p><strong>컴퓨터에 무엇을 수행할지 지시하기 — 절차의 표현</strong></p>
+<ul>
+<li>
+<a href="fsm.html">보물 찾기 — 유한상태 오토마타</a><br>
+</li>
+<li><a href="language.html">진군 명령 — 프로그래밍 언어</a></li>
+</ul>
+<p><strong>컴퓨터에 무엇을 수행할지 지시하기</strong></p>
+<p>컴퓨터는 초당 수백만번 명령에 따라 움직입니다. 컴퓨터에 무엇을 수행해야 할지 지시하기 위해서,
+올바른 명령을 주면 좋겠지만, 말처럼 생각만큼 쉬운 일이 아닙니다.</p>
+<p>우리는 명령을 받았을 때, 명령의 의미를 해석하기 위해서 상식적으로 생각합니다.
+“문을 통해서 오세요”라고 누군가 말을 한다면,
+실제로 문을 부수고 통과해서 들어오라는 뜻은 아닙니다.
+필요하다면 문을 열고 통해서 들어오라는 의미입니다.
+컴퓨터는 매우 다릅니다. 만약 모바일 로봇에 컴퓨터가 장착된다면,
+명령을 글자 그대로 해석해서 문을 부수고 들어올 수 있는 위험이나 손상이 생길 수 있으니 주의할 필요가 있습니다.
+생각 없이 명령을 정확하게 수행만 하는 컴퓨터를 다루는 것에 익술해질 필요가 있습니다.</p>
+<p>제 3 부에서는 활동 2개를 통해서 고정된 명령어 집합을 사용하여
+문자 그대만 움직이는 기계(컴퓨터)와 상호작용하는 것이 어떤 의미인지를 학습하게 될 것입니다.</p>
+<p>첫번째 활동에서는 컴퓨터가 작업할 수 있는 기호,
+즉 단어, 숫자, 기호 문자열을 인식하기 위해 컴퓨터가 사용하는 기계,
+“유한-상태 오토마타(finite-state automata)” 에 대해 배웁니다.</p>
+<p>두번째 활동은 인간이 어떻게 컴퓨터와 상호작용하는지 배웁니다.
+좋은 프로그래머는 문자 그대로 해석되는 한정된 명령어 집합으로
+컴퓨터가 무엇을 수행할지 전달하는 방식에 대해서 이해할 필요가 있습니다.
+명령어 목록이 프로그램입니다.
+이러한 명령어를 작성하는 프로그래밍 언어가 많이 있지만,
+여기서는 컴퓨터 없이도 사용할 수 있는 매우 간단한 언어를 사용할 것입니다.</p>
+<div class="inline-figure"><img src="img/03-part-three.png" style="width:100.0%"></div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="internet.html"><span class="header-section-number">11</span> 네트워크 통신 프로토콜</a></div>
+<div class="next"><a href="fsm.html"><span class="header-section-number">12</span> 유한상태 오토마타</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#language-part-three">언어</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
