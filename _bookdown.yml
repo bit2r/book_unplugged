@@ -7,21 +7,24 @@ language:
     chapter_name: !expr function(i) paste( i, ". ")
 delete_merged_file: true
 
+
 new_session: yes
 
 rmd_files: [
   "index.Rmd",
 
-  # 컴퓨터 과학
-  # "00-intro.Rmd",
+  # 컴퓨터 과학 ===================
+  "00-intro.Rmd",
+  # 1부 ---------------------------
   "10-part.Rmd",
   "11-binary-numbers.Rmd",
   "12-image-representation.Rmd",
   "13-text-compression.Rmd",
   "14-checksum.Rmd",
   "15-info-theory.Rmd",
-  # "20-part.Rmd",
-  # "21-searching-algorithm.Rmd",
+  # 2부 --------------------------
+  "20-part.Rmd",
+  "21-searching-algorithm.Rmd",
   # "22-sorting-algorithm.Rmd",
   # "23-sorting-networks.Rmd",
   # "24-minimal-spanning-tree.Rmd",

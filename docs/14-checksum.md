@@ -1,4 +1,4 @@
-# 카드 뒤집기 마술 - 오류 탐지 및 수정 {#checksum}
+# 오류 탐지 및 수정 {#checksum}
 
 ::: {#checksum-activity .rmdnote}
 
@@ -41,7 +41,7 @@
 | - | <iframe width="350" height="260" src="https://www.youtube.com/embed/-35-sPTYPJg" frameborder="0" allowfullscreen></iframe>|
 
 
-## 마술 {#checksum-magic}
+## 카드 뒤집기 마술 {#checksum-magic}
 
 ### 시연  
 

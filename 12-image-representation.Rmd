@@ -1,4 +1,4 @@
-# 숫자로 색깔 표현하기 - 이미지 표현 {#image-representation}
+# 이미지 표현 {#image-representation}
 
 ::: {#binary-number-image .rmdnote}
 

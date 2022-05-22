@@ -4,15 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>4 . 카드 뒤집기 마술 - 오류 탐지 및 수정 | 데이터 과학 언플러그드</title>
+<title>4 . 오류 탐지 및 수정 | 데이터 과학 언플러그드</title>
 <meta name="author" content="한국 알(R) 사용자회">
 <meta name="description" content="4.1 활동 4  개요 데이터가 컴퓨터 디스크에 저장되거나 A 컴퓨터에서 B 컴퓨터로 데이터가 전송될 때, 보통 데이터처리할 때 변경될 것이라고 생각하지는 않는다. 하지만 때때로 데이터에 오류가 발생하고, 우연히 데이터 변경이 일어나기도 한다. 이번 활동은 마술을 사용해서 손상된 데이터를 어떻게 탐지하고 오류난 데이터를 어떻게 교정하는지 익힐...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="4 . 카드 뒤집기 마술 - 오류 탐지 및 수정 | 데이터 과학 언플러그드">
+<meta property="og:title" content="4 . 오류 탐지 및 수정 | 데이터 과학 언플러그드">
 <meta property="og:type" content="book">
 <meta property="og:description" content="4.1 활동 4  개요 데이터가 컴퓨터 디스크에 저장되거나 A 컴퓨터에서 B 컴퓨터로 데이터가 전송될 때, 보통 데이터처리할 때 변경될 것이라고 생각하지는 않는다. 하지만 때때로 데이터에 오류가 발생하고, 우연히 데이터 변경이 일어나기도 한다. 이번 활동은 마술을 사용해서 손상된 데이터를 어떻게 탐지하고 오류난 데이터를 어떻게 교정하는지 익힐...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4 . 카드 뒤집기 마술 - 오류 탐지 및 수정 | 데이터 과학 언플러그드">
+<meta name="twitter:title" content="4 . 오류 탐지 및 수정 | 데이터 과학 언플러그드">
 <meta name="twitter:description" content="4.1 활동 4  개요 데이터가 컴퓨터 디스크에 저장되거나 A 컴퓨터에서 B 컴퓨터로 데이터가 전송될 때, 보통 데이터처리할 때 변경될 것이라고 생각하지는 않는다. 하지만 때때로 데이터에 오류가 발생하고, 우연히 데이터 변경이 일어나기도 한다. 이번 활동은 마술을 사용해서 손상된 데이터를 어떻게 탐지하고 오류난 데이터를 어떻게 교정하는지 익힐...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -67,11 +67,14 @@
 <li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
 <li class="book-part">CS: 제 1 부</li>
 <li><a class="" href="data-structure-raw.html">원재료</a></li>
-<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 카드 점의 개수를 세다 - 이진수</a></li>
-<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 숫자로 색깔 표현하기 - 이미지 표현</a></li>
-<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></li>
-<li><a class="active" href="checksum.html"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></li>
-<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 스무고개 - 정보 이론</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 텍스트 압축</a></li>
+<li><a class="active" href="checksum.html"><span class="header-section-number">4</span> 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 정보 이론</a></li>
+<li class="book-part">CS: 제 2 부</li>
+<li><a class="" href="algorithm.html">알고리즘</a></li>
+<li><a class="" href="searching-algorithms.html"><span class="header-section-number">6</span> 검색 알고리즘</a></li>
 <li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
 </ul>
 
@@ -82,7 +85,7 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="checksum" class="section level1" number="4">
 <h1>
-<span class="header-section-number">4 . </span> 카드 뒤집기 마술 - 오류 탐지 및 수정<a class="anchor" aria-label="anchor" href="#checksum"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4 . </span> 오류 탐지 및 수정<a class="anchor" aria-label="anchor" href="#checksum"><i class="fas fa-link"></i></a>
 </h1>
 <div id="checksum-activity" class="rmdnote">
 <div id="activity-four" class="section level2" number="4.1">
@@ -153,7 +156,7 @@
 </div>
 <div id="checksum-magic" class="section level2" number="4.3">
 <h2>
-<span class="header-section-number">4.3</span> 마술<a class="anchor" aria-label="anchor" href="#checksum-magic"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> 카드 뒤집기 마술<a class="anchor" aria-label="anchor" href="#checksum-magic"><i class="fas fa-link"></i></a>
 </h2>
 <div id="시연" class="section level3" number="4.3.1">
 <h3>
@@ -316,12 +319,12 @@ A: 앵무새 오류 (parroty error)</p>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="text-compression.html"><span class="header-section-number">3</span> 다시 말할 수 있어요! - 텍스트 압축</a></div>
-<div class="next"><a href="info-theory-title.html"><span class="header-section-number">5</span> 스무고개 - 정보 이론</a></div>
+<div class="prev"><a href="text-compression.html"><span class="header-section-number">3</span> 텍스트 압축</a></div>
+<div class="next"><a href="info-theory-title.html"><span class="header-section-number">5</span> 정보 이론</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#checksum"><span class="header-section-number">4</span> 카드 뒤집기 마술 - 오류 탐지 및 수정</a></li>
+<li><a class="nav-link" href="#checksum"><span class="header-section-number">4</span> 오류 탐지 및 수정</a></li>
 <li>
 <a class="nav-link" href="#activity-four"><span class="header-section-number">4.1</span> 활동 4</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94-3">개요</a></li>
@@ -333,7 +336,7 @@ A: 앵무새 오류 (parroty error)</p>
 </li>
 <li><a class="nav-link" href="#avi-checksum"><span class="header-section-number">4.2</span> 언플러그드 동영상</a></li>
 <li>
-<a class="nav-link" href="#checksum-magic"><span class="header-section-number">4.3</span> 마술</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#checksum-magic"><span class="header-section-number">4.3</span> 카드 뒤집기 마술</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#%EC%8B%9C%EC%97%B0"><span class="header-section-number">4.3.1</span> 시연</a></li>
 <li><a class="nav-link" href="#%EC%95%84%EC%9D%B4%EB%93%A4%EC%97%90%EA%B2%8C-%EB%AC%98%EA%B8%B0-%EC%84%A4%EB%AA%85%ED%95%98%EA%B8%B0"><span class="header-section-number">4.3.2</span> 아이들에게 묘기 설명하기</a></li>
 <li><a class="nav-link" href="#%ED%99%95%EC%9E%A5-%ED%99%9C%EB%8F%99"><span class="header-section-number">4.3.3</span> 확장 활동</a></li>

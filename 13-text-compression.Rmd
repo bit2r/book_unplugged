@@ -1,4 +1,4 @@
-# 다시 말할 수 있어요! - 텍스트 압축 {#text-compression}
+# 텍스트 압축 {#text-compression}
 
 ::: {#binary-number-text .rmdnote}
 

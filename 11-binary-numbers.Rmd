@@ -4,7 +4,7 @@ editor_options:
     wrap: sentence
 ---
 
-# 카드 점의 개수를 세다 - 이진수 {#binary-number}
+# 이진수 {#binary-number}
 
 ::: {#binary-number-cards .rmdnote}
 
@@ -50,7 +50,7 @@ editor_options:
 |:----------------------------------:|:----------------------------------:|
 | <iframe width="350" height="260" src="https://www.youtube.com/embed/Wy6-FXtLMV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> | <iframe width="350" height="260" src="https://www.youtube.com/embed/Jf033A_lBbA" frameborder="0" allowfullscreen></iframe> |
 
-## 카드 점의 개수를 세다: 이진수 {#binary-number-intro}
+## 카드 점의 개수를 세다 {#binary-number-intro}
 
 ### 들어가며
 
