@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>8 . 정렬 네트워크 | 데이터 과학 언플러그드</title>
+<meta name="author" content="한국 알(R) 사용자회">
+<meta name="description" content="8.1 활동 8  개요 컴퓨터가 빠르기는 하지만, 컴퓨터가 문제를 해결하는데 분명히 한계가 있다. 컴퓨터의 속도를 높이는 방법 중의 하나는 여러 대의 컴퓨터로 문제를 나누어서 해결하는 것이다. 이번 활동에서, 동시에 여러 개를 비교해서 정렬할 수 있는 정렬망(sorting networks)에 대해 알아봅니다.  교과학습 연계 수학 : 숫자 레벨 2...">
+<meta name="generator" content="bookdown 0.26 with bs4_book()">
+<meta property="og:title" content="8 . 정렬 네트워크 | 데이터 과학 언플러그드">
+<meta property="og:type" content="book">
+<meta property="og:description" content="8.1 활동 8  개요 컴퓨터가 빠르기는 하지만, 컴퓨터가 문제를 해결하는데 분명히 한계가 있다. 컴퓨터의 속도를 높이는 방법 중의 하나는 여러 대의 컴퓨터로 문제를 나누어서 해결하는 것이다. 이번 활동에서, 동시에 여러 개를 비교해서 정렬할 수 있는 정렬망(sorting networks)에 대해 알아봅니다.  교과학습 연계 수학 : 숫자 레벨 2...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8 . 정렬 네트워크 | 데이터 과학 언플러그드">
+<meta name="twitter:description" content="8.1 활동 8  개요 컴퓨터가 빠르기는 하지만, 컴퓨터가 문제를 해결하는데 분명히 한계가 있다. 컴퓨터의 속도를 높이는 방법 중의 하나는 여러 대의 컴퓨터로 문제를 나누어서 해결하는 것이다. 이번 활동에서, 동시에 여러 개를 비교해서 정렬할 수 있는 정렬망(sorting networks)에 대해 알아봅니다.  교과학습 연계 수학 : 숫자 레벨 2...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">데이터 과학 언플러그드</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">데이터 과학 언플러그드</a></li>
+<li class="book-part">CS: 제 1 부</li>
+<li><a class="" href="data-structure-raw.html">원재료</a></li>
+<li><a class="" href="binary-number.html"><span class="header-section-number">1</span> 이진수</a></li>
+<li><a class="" href="image-representation.html"><span class="header-section-number">2</span> 이미지 표현</a></li>
+<li><a class="" href="text-compression.html"><span class="header-section-number">3</span> 텍스트 압축</a></li>
+<li><a class="" href="checksum.html"><span class="header-section-number">4</span> 오류 탐지 및 수정</a></li>
+<li><a class="" href="info-theory-title.html"><span class="header-section-number">5</span> 정보 이론</a></li>
+<li class="book-part">CS: 제 2 부</li>
+<li><a class="" href="algorithm.html">알고리즘</a></li>
+<li><a class="" href="searching-algorithms.html"><span class="header-section-number">6</span> 검색 알고리즘</a></li>
+<li><a class="" href="sorting-algorithms.html"><span class="header-section-number">7</span> 정렬 알고리즘</a></li>
+<li><a class="active" href="sorting-networks.html"><span class="header-section-number">8</span> 정렬 네트워크</a></li>
+<li><a class="" href="minimal-spanning-tree.html"><span class="header-section-number">9</span> 최소생성나무</a></li>
+<li><a class="" href="orange-game.html"><span class="header-section-number">10</span> 네트워크 라우팅과 교착</a></li>
+<li><a class="" href="internet.html"><span class="header-section-number">11</span> 네트워크 통신 프로토콜</a></li>
+<li><a class="" href="%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C.html">참고문헌</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sorting-networks" class="section level1" number="8">
+<h1>
+<span class="header-section-number">8 . </span> 정렬 네트워크<a class="anchor" aria-label="anchor" href="#sorting-networks"><i class="fas fa-link"></i></a>
+</h1>
+<div id="sorting-network-activity" class="rmdnote">
+<div id="activity-eight" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> 활동 8<a class="anchor" aria-label="anchor" href="#activity-eight"><i class="fas fa-link"></i></a>
+</h2>
+<div id="개요-7" class="section level3 unnumbered">
+<h3>개요<a class="anchor" aria-label="anchor" href="#%EA%B0%9C%EC%9A%94-7"><i class="fas fa-link"></i></a>
+</h3>
+<p>컴퓨터가 빠르기는 하지만, 컴퓨터가 문제를 해결하는데 분명히 한계가 있다.
+컴퓨터의 속도를 높이는 방법 중의 하나는 여러 대의 컴퓨터로 문제를 나누어서 해결하는 것이다.
+이번 활동에서, 동시에 여러 개를 비교해서 정렬할 수 있는 정렬망(sorting networks)에 대해 알아봅니다.</p>
+</div>
+<div id="교과학습-연계-7" class="section level3 unnumbered">
+<h3>교과학습 연계<a class="anchor" aria-label="anchor" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-7"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>수학 : 숫자 레벨 2 이상. 숫자 탐색: 이상, 이하.</li>
+</ul>
+</div>
+<div id="기술-7" class="section level3 unnumbered">
+<h3>기술<a class="anchor" aria-label="anchor" href="#%EA%B8%B0%EC%88%A0-7"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>비교하기</li>
+<li>정리하기</li>
+<li>알고리즘 개발하기</li>
+<li>협업으로 문제 해결하기</li>
+</ul>
+</div>
+<div id="나이-7" class="section level3 unnumbered">
+<h3>나이<a class="anchor" aria-label="anchor" href="#%EB%82%98%EC%9D%B4-7"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>7세 이상</li>
+</ul>
+</div>
+<div id="학습-교재-7" class="section level3 unnumbered">
+<h3>학습 교재<a class="anchor" aria-label="anchor" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-7"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>야외 활동에 필요한 것들.
+<ul>
+<li>분필이나 그릴 것<br>
+</li>
+<li>6장 카드로 구성된 복사본 두벌: 복사 마스터 정렬네트워크 카드 (77 페이지)를 오려 붙이세요.<br>
+</li>
+<li>초시계(stopwatch)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="parallel-avi" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> 언플러그드 동영상<a class="anchor" aria-label="anchor" href="#parallel-avi"><i class="fas fa-link"></i></a>
+</h2>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="70%">
+<col width="30%">
+</colgroup>
+<thead><tr class="header">
+<th align="center">한글 동영상</th>
+<th align="center">영어 동영상</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center"><iframe width="350" height="260" src="https://www.youtube.com/embed/-eI3bbsbOPI" frameborder="0" allowfullscreen> </iframe></td>
+<td align="center"><iframe width="350" height="260" src="https://www.youtube.com/embed/30WcPnvfiKE" frameborder="0" allowfullscreen> </iframe></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="sorting-network-intro" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> 시간 내 일을 마치기<a class="anchor" aria-label="anchor" href="#sorting-network-intro"><i class="fas fa-link"></i></a>
+</h2>
+<p>먼저 활동을 시작하기 전에, 지면에 아이가 걸을 정도 크기로 네트워크 다이어그램을 그립니다. 교실에서는 큰 종이나 시트를 사용하면 좋습니다.</p>
+<div class="figure">
+<img src="img/ch08-parallel/08-parallel-01-activity.png" style="width:100.0%" alt=""><p class="caption">네트워크 활동</p>
+</div>
+<div id="지시사항" class="section level3" number="8.3.1">
+<h3>
+<span class="header-section-number">8.3.1</span> 지시사항<a class="anchor" aria-label="anchor" href="#%EC%A7%80%EC%8B%9C%EC%82%AC%ED%95%AD"><i class="fas fa-link"></i></a>
+</h3>
+<p>이번 활동에서는 정렬 네트워크를 사용해서 컴퓨터가 어떻게 난수를 정렬하는지 학습할 것입니다.</p>
+<ol style="list-style-type: decimal">
+<li>아이들을 6 명이 1 조가 되도록 구성합니다. 한번에 한팀(6명 1조)만 정렬 네트워크게임을 할 수 있습니다.<br>
+</li>
+<li>각 조원은 숫자가 적힌 카드를 받습니다.<br>
+</li>
+<li>각 조원은 무작위로 섞여 왼편(들어가기) 사각형 위에 섭니다. 뒤죽박죽으로 번호 순서가 섞여야 합니다.<br>
+</li>
+<li>각 조원은 화살표 선을 따라 움직이고, 원(‘○’)에 도착하면 <strong>다른 조원이 도착할 때까지 기다립니다</strong>.<br>
+</li>
+<li>친구 조원이 ‘○’’ 곳까지 왔다면 당신의 카드와 친구의 카드를 비교해 봅시다.
+작은 숫자 카드를 가지고 있는 사람은 왼쪽 줄을 따라 이동합니다.
+더 큰 숫자 카드를 가진 사람은 오른쪽 줄을 따라 이동합니다.<br>
+</li>
+<li>반대쪽 끝에 모두 도착했을 때, 정렬이 제대로 되었는지 확인합니다.</li>
+</ol>
+<p>잘못되면 다시 처음부터 다시 시작합니다.
+예를 들면, 네트워크 접점(‘○’)에서 작은 숫자는 왼쪽으로,
+그렇지 않으면 오른쪽으로 진행한다는 것을 제대로 이해할 수 있는지 확인합시다.</p>
+<div class="inline-figure">
+<img src="img/ch08-parallel/08-parallel-01-activity-solution.png" alt="네트워크 활동">{#width=100%}</div>
+</div>
+</div>
+<div id="network-handout" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> 학습교구: 정렬 네트워크<a class="anchor" aria-label="anchor" href="#network-handout"><i class="fas fa-link"></i></a>
+</h2>
+<p><img src="img/ch08-parallel/08-parallel-02-photocopy-master-01.png" style="width:100.0%"><img src="img/ch08-parallel/08-parallel-02-photocopy-master-02.png" style="width:100.0%"></p>
+<div id="network-variation" class="section level3" number="8.4.1">
+<h3>
+<span class="header-section-number">8.4.1</span> 변형<a class="anchor" aria-label="anchor" href="#network-variation"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>아이들이 활동에 익숙해지면, 초시계를 사용하여 한 조가 네트워크를 통과하는데 얼마나 걸리는지 시간을 측정합니다.</p></li>
+<li><p>좀더 큰 수를 카드로 사용합니다. (예, 복사 마스터 세자리 숫자를 복사해서 사용하세요.)</p></li>
+<li><p>비교하기 힘든 큰 숫자 카드를 만들어 봅시다. 또는 단어 카드를 사용하여 가나다 순서나 영어 알파벳 순서로 정렬해 봅시다.</p></li>
+</ol>
+</div>
+<div id="sorting-networks-expansion" class="section level3" number="8.4.2">
+<h3>
+<span class="header-section-number">8.4.2</span> 확장 활동<a class="anchor" aria-label="anchor" href="#sorting-networks-expansion"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>작은 숫자를 가진 사람이 왼쪽 대신에 오른쪽으로 가면, 혹은 역으로 하면 무슨 일이 생길까요? (숫자는 반대로 정렬될 것입니다.)</li>
+</ol>
+<p>네트워크 역방향으로 진행하면 어떻게 될까요? (반드시 동작하지는 않습니다. 아이들은 제대로 정렬되지 않고 나오는 경우를 발견할 수 있어야 합니다.)</p>
+<ol start="2" style="list-style-type: decimal">
+<li>좀더 크거나 작은 네트워크를 설계해 보세요. 예를 들어 숫자 세개를 정렬하는 네트워크가 있습니다. 아이들 각자 자신만의 네트워크를 그려보세요.</li>
+</ol>
+<div class="inline-figure"><img src="img/ch08-parallel/08-parallel-03-own-network.png" style="width:100.0%"></div>
+<ol start="3" style="list-style-type: decimal">
+<li>다음은 입력 숫자 4개를 정렬하는 서로 다른 두 개의 네트워크입니다.
+어느 쪽이 더 빠를까요? (두 번째가 더 빠릅니다. 첫 번째 네트워크는 순차적으로 모든 비교를 수행하는
+반면에 두 번째 네트워크는 동시 비교를 수행합니다.
+첫번째 네트워크는 순차처리 예가 되고, 반면에 두번째 네트워크는 더 빠른 병렬처리를 사용합니다.)</li>
+</ol>
+<div class="inline-figure"><img src="img/ch08-parallel/08-parallel-04-two-networks.png" style="width:100.0%"></div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>좀더 커다란 정렬 네트워크를 만들어 보세요.</p></li>
+<li><p>입력 데이터 중에서 최소 혹은 최대값을 찾아내기 위해서도 네트워크를 활용합니다.
+예를 들어, 여기 최소 출력값을 얻기 위한 입력 숫자 8개를 가진 네트워크가 있습니다.
+(다른 값들은 네트워크에서 사라집니다.)</p></li>
+</ol>
+<div class="figure">
+<img src="img/ch08-parallel/08-parallel-05-minimum-networks.png" style="width:100.0%" alt=""><p class="caption">최소 네트워크</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>일상생활에서 병렬처리하면 빠르게 할 수 있는 일이 어떤게 있을까요? 병렬적으로 처리해도 별로 효과가 없는 일은 무엇일까요?
+예를 들어, 요리를 할 때 조리기구를 하나만 사용한다면 무척이나 느릴 것입니다.
+왜냐하면 조리기구를 순차적으로 요리를 한다면, 요리 하나가 끝날 때까지 기다려야 하기 때문에 시간이 오래 걸릴 것입니다.
+더 많은 사람을 고용해서 빨리 끝날 수 있는 일과 그렇지 못한 일은 무엇이 있을까요?</li>
+</ol>
+</div>
+</div>
+<div id="sorting-network-lesson" class="section level2" number="8.5">
+<h2>
+<span class="header-section-number">8.5</span> 컴퓨터 과학 핵심 개념<a class="anchor" aria-label="anchor" href="#sorting-network-lesson"><i class="fas fa-link"></i></a>
+</h2>
+<p>오늘날 컴퓨터를 점점 더 많이 사용함에 따라 더 빠르게 컴퓨터가 정보를 처리해주기를 원합니다.</p>
+<p>컴퓨터 속도를 높이는 방법은 동일한 작업을 수행함에 있어 더 적은 연산절차(활동 6과 7에서 학습)를 가진 프로그램을 작성하는 것입니다.</p>
+<p>문제를 더 빠르게 해결하는 다른 방법은 동시에 같은 작업을 나누어서 다수 컴퓨터로 작업을 수행하는 것입니다.
+예를 들어, 숫자 6개 정렬 네트워크에서, 6개 숫자를 정렬하기 위해서 12번의 비교가 필요하지만,
+동시에 최대 3회 비교를 한번에 수행했다.
+이것이 의미하는 것은 정렬에 걸리는 시간이 5회 비교작업 시간과 동일하다는 것이다.
+이 병렬 네트워크는 목록을 순차적으로 비교하여 처리하는 것보다 두배 이상 빨리 정렬할 수 있다.</p>
+<p>모든 작업이 병렬처리를 통해서 빨라질 수 있는 것은 아닙니다. 한 사람이 10 미터 도랑을 판다고 상상해 봅시다.
+만약 10 사람이 1 미터씩 도랑을 판다면, 10 미터 파는 작업은 훨씬 빠르게 끝납니다.
+하지만 동일한 전략이 10미터 깊이 땅굴을 팔 때는 사용될 수 없습니다.
+첫 1 미터 작업이 끝날 때까지 다음 1미터 작업을 할 수 없기 때문입니다.
+컴퓨터 과학자들은 컴퓨터를 병렬로 작동함으로써 빠르게 문제를 해결하는 방법을 찾으려고 적극적으로 노력하고 있습니다.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="sorting-algorithms.html"><span class="header-section-number">7</span> 정렬 알고리즘</a></div>
+<div class="next"><a href="minimal-spanning-tree.html"><span class="header-section-number">9</span> 최소생성나무</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sorting-networks"><span class="header-section-number">8</span> 정렬 네트워크</a></li>
+<li>
+<a class="nav-link" href="#activity-eight"><span class="header-section-number">8.1</span> 활동 8</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#%EA%B0%9C%EC%9A%94-7">개요</a></li>
+<li><a class="nav-link" href="#%EA%B5%90%EA%B3%BC%ED%95%99%EC%8A%B5-%EC%97%B0%EA%B3%84-7">교과학습 연계</a></li>
+<li><a class="nav-link" href="#%EA%B8%B0%EC%88%A0-7">기술</a></li>
+<li><a class="nav-link" href="#%EB%82%98%EC%9D%B4-7">나이</a></li>
+<li><a class="nav-link" href="#%ED%95%99%EC%8A%B5-%EA%B5%90%EC%9E%AC-7">학습 교재</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#parallel-avi"><span class="header-section-number">8.2</span> 언플러그드 동영상</a></li>
+<li>
+<a class="nav-link" href="#sorting-network-intro"><span class="header-section-number">8.3</span> 시간 내 일을 마치기</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%EC%A7%80%EC%8B%9C%EC%82%AC%ED%95%AD"><span class="header-section-number">8.3.1</span> 지시사항</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#network-handout"><span class="header-section-number">8.4</span> 학습교구: 정렬 네트워크</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#network-variation"><span class="header-section-number">8.4.1</span> 변형</a></li>
+<li><a class="nav-link" href="#sorting-networks-expansion"><span class="header-section-number">8.4.2</span> 확장 활동</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#sorting-network-lesson"><span class="header-section-number">8.5</span> 컴퓨터 과학 핵심 개념</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>데이터 과학 언플러그드</strong>" was written by 한국 알(R) 사용자회. It was last built on 2022-05-22.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
